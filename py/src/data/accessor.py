@@ -20,7 +20,7 @@ class DataAccessor(object):
         return self.__get_katana_by_name(no_or_name)
 
     def __get_katana_by_no(self, no: str) -> KatanaInfo:
-        return self.__data.get(no)
+        return self.__data.get(f'{int(no):03d}')
 
     def __get_katana_by_name(self, name: str) -> KatanaInfo:
         candidates = self.__search_katana(name)

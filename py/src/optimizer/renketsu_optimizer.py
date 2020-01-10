@@ -3,7 +3,7 @@
 __all__ = ['RenketsuOptimizer']
 __author__ = 't-black-msq <t.black.msq@gmail.com>'
 
-from accessor import DataAccessor
+from data import DataAccessor
 from model import RenketsuModel
 
 
@@ -20,11 +20,16 @@ class RenketsuOptimizer(object):
         return self.__katana
 
     def add_objective(self):
-        identifier = input('Input Katana No or Katana Name')
-        self.__katana = self.__accessor.get_katana(identifier)
+        identifier = input('Input Katana No or Katana Name: ')
+        if identifier:
+            self.__katana = self.__accessor.get_katana(identifier)
+        else:
+            print('invalid')
 
         if self.__katana is None:
-            ...
+            print('no katana')
+
+        print(self.__katana['display_name'])
 
     def optimize(self):
         ...

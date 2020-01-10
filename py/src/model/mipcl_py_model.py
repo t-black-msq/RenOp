@@ -6,8 +6,8 @@ __author__ = 't-black-msq <t.black.msq@gmail.com>'
 import mipcl_py.mipshell.mipshell as mp
 
 
-class RenketsuModel:
+class RenketsuModel(mp.Problem):
     """"""
 
     def __init__(self, model_name: str):
-        self.__model = mp.Problem(model_name)
+        super().__init__(model_name)

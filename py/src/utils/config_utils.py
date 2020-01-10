@@ -7,7 +7,7 @@ import json
 from typing import Any, Dict, NewType, Union
 
 KatanaInfo = NewType('KatanaInfo', Dict[str, Dict[str, Union[str, Dict[str, int]]]])
-FILENAME = './data/kanata.json'
+FILENAME = './data/katana.json'
 
 def read_data() -> KatanaInfo:
     with open(FILENAME, encoding='utf8') as data_file:

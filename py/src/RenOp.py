@@ -10,3 +10,7 @@ def main():
     optimizer = RenketsuOptimizer()
     optimizer.add_objective()
     optimizer.optimize()
+
+
+if __name__ == '__main__':
+    main()
