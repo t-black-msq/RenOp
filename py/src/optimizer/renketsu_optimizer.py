@@ -6,6 +6,8 @@ __author__ = 't-black-msq <t.black.msq@gmail.com>'
 from data import DataAccessor
 from model import RenketsuModel
 
+from utils import is_integer, read_possessed
+
 
 class RenketsuOptimizer(object):
     """"""
@@ -14,6 +16,7 @@ class RenketsuOptimizer(object):
         self.__accessor = DataAccessor()
         self.__katana = None
         self.__model = RenketsuModel('renketsu')
+        self.__possessed = read_possessed()
 
     @property
     def katana(self):
@@ -28,8 +31,19 @@ class RenketsuOptimizer(object):
 
         if self.__katana is None:
             print('no katana')
+            return
 
-        print(self.__katana['display_name'])
+        print(f'Input {self.__katana["display_name"]}\'s recent status value')
+        self.__dageki = self.__make_user_input_integer('Dageki: ')
+        self.__tousotsu = self.__make_user_input_integer('Tousotsu: ')
+        self.__kidou = self.__make_user_input_integer('Kidou: ')
+        self.__shouryoku = self.__make_user_input_integer('Shouryoku: ')
+
+    def __make_user_input_integer(self, message: str) -> int:
+        val = input(message)
+        while (not is_integer(val)):
+            val = input(message)
+        return int(val)
 
     def optimize(self):
         ...
