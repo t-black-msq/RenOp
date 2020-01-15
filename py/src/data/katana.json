@@ -23,10 +23,21 @@
       "teisatsu": 32.0,
       "tousotsu": 66
     },
-    "name": "",
+    "name": "Mikaduki Munechika",
     "range": "狭",
     "rarelity": 5,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 56,
+      "hissatsu": 30,
+      "impei": 35,
+      "kidou": 37,
+      "seizon": 56,
+      "shouryoku": 46,
+      "teisatsu": 35,
+      "tousotsu": 58
+    },
     "toku_max_status": {
       "dageki": 72,
       "hissatsu": 30,
@@ -37,6 +48,7 @@
       "teisatsu": 38.0,
       "tousotsu": 72
     },
+    "uid": "003",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 0, "tousotsu": 2 }
   },
   "005": {
@@ -63,10 +75,21 @@
       "teisatsu": 32.0,
       "tousotsu": 63
     },
-    "name": "",
+    "name": "Kogitsunemaru",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 53,
+      "hissatsu": 28,
+      "impei": 30,
+      "kidou": 41,
+      "seizon": 50,
+      "shouryoku": 43,
+      "teisatsu": 36,
+      "tousotsu": 54
+    },
     "toku_max_status": {
       "dageki": 68,
       "hissatsu": 28,
@@ -77,6 +100,7 @@
       "teisatsu": 38.0,
       "tousotsu": 69
     },
+    "uid": "005",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 0, "tousotsu": 2 }
   },
   "007": {
@@ -103,10 +127,21 @@
       "teisatsu": 12.0,
       "tousotsu": 65
     },
-    "name": "",
+    "name": "Ishikirimaru",
     "range": "広",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 63,
+      "hissatsu": 32,
+      "impei": 23,
+      "kidou": 13,
+      "seizon": 63,
+      "shouryoku": 51,
+      "teisatsu": 13,
+      "tousotsu": 55
+    },
     "toku_max_status": {
       "dageki": 85,
       "hissatsu": 32,
@@ -117,6 +152,7 @@
       "teisatsu": 15.0,
       "tousotsu": 68
     },
+    "uid": "007",
     "up": { "dageki": 3, "kidou": 1, "shouryoku": 1, "tousotsu": 2 }
   },
   "008": {
@@ -143,10 +179,12 @@
       "teisatsu": 46.0,
       "tousotsu": 112
     },
-    "name": "",
+    "name": "Ishikirimaru Kiwami",
     "range": "広",
     "rarelity": 4,
     "slot": 3,
+    "toku": 100,
+    "uid": "008",
     "up": { "dageki": 6, "kidou": 2, "shouryoku": 2, "tousotsu": 4 }
   },
   "009": {
@@ -173,10 +211,21 @@
       "teisatsu": 36.0,
       "tousotsu": 46
     },
-    "name": "",
+    "name": "Iwatoshi",
     "range": "横",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 53,
+      "hissatsu": 29,
+      "impei": 35,
+      "kidou": 34,
+      "seizon": 54,
+      "shouryoku": 50,
+      "teisatsu": 35,
+      "tousotsu": 45
+    },
     "toku_max_status": {
       "dageki": 68,
       "hissatsu": 29,
@@ -187,6 +236,7 @@
       "teisatsu": 41.0,
       "tousotsu": 51
     },
+    "uid": "009",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 2, "tousotsu": 1 }
   },
   "011": {
@@ -213,10 +263,21 @@
       "teisatsu": 45.0,
       "tousotsu": 34
     },
-    "name": "",
+    "name": "Imanotsurugi",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 17,
+      "hissatsu": 45,
+      "impei": 40,
+      "kidou": 31,
+      "seizon": 30,
+      "shouryoku": 21,
+      "teisatsu": 39,
+      "tousotsu": 30
+    },
     "toku_max_status": {
       "dageki": 26,
       "hissatsu": 45,
@@ -227,6 +288,7 @@
       "teisatsu": 49.0,
       "tousotsu": 38
     },
+    "uid": "011",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 2, "tousotsu": 0 }
   },
   "012": {
@@ -253,10 +315,12 @@
       "teisatsu": 120.0,
       "tousotsu": 82
     },
-    "name": "",
+    "name": "Imanotsurugi Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "012",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 4, "tousotsu": 0 }
   },
   "013": {
@@ -283,10 +347,21 @@
       "teisatsu": 24.0,
       "tousotsu": 64
     },
-    "name": "",
+    "name": "Ohdenta Mitsuyo",
     "range": "狭",
     "rarelity": 5,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 62,
+      "hissatsu": 37,
+      "impei": 27,
+      "kidou": 27,
+      "seizon": 64,
+      "shouryoku": 46,
+      "teisatsu": 27,
+      "tousotsu": 52
+    },
     "toku_max_status": {
       "dageki": 76,
       "hissatsu": 37,
@@ -297,6 +372,7 @@
       "teisatsu": 30.0,
       "tousotsu": 70
     },
+    "uid": "013",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "015": {
@@ -323,10 +399,21 @@
       "teisatsu": 26.0,
       "tousotsu": 66
     },
-    "name": "",
+    "name": "Sohayanotsurugi",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 58,
+      "hissatsu": 25,
+      "impei": 31,
+      "kidou": 42,
+      "seizon": 57,
+      "shouryoku": 44,
+      "teisatsu": 30,
+      "tousotsu": 61
+    },
     "toku_max_status": {
       "dageki": 70,
       "hissatsu": 25,
@@ -337,6 +424,7 @@
       "teisatsu": 32.0,
       "tousotsu": 72
     },
+    "uid": "015",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "017": {
@@ -363,10 +451,21 @@
       "teisatsu": 29.0,
       "tousotsu": 73
     },
-    "name": "",
+    "name": "Juzumaru Tsunetsugu",
     "range": "狭",
     "rarelity": 5,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 47,
+      "hissatsu": 29,
+      "impei": 30,
+      "kidou": 35,
+      "seizon": 56,
+      "shouryoku": 40,
+      "teisatsu": 29,
+      "tousotsu": 57
+    },
     "toku_max_status": {
       "dageki": 62,
       "hissatsu": 29,
@@ -377,6 +476,7 @@
       "teisatsu": 34.0,
       "tousotsu": 78
     },
+    "uid": "017",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "019": {
@@ -403,10 +503,21 @@
       "teisatsu": 49.0,
       "tousotsu": 40
     },
-    "name": "",
+    "name": "Nikkari Aoe",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 32,
+      "hissatsu": 40,
+      "impei": 45,
+      "kidou": 43,
+      "seizon": 36,
+      "shouryoku": 31,
+      "teisatsu": 47,
+      "tousotsu": 34
+    },
     "toku_max_status": {
       "dageki": 44,
       "hissatsu": 40,
@@ -417,6 +528,7 @@
       "teisatsu": 55.0,
       "tousotsu": 46
     },
+    "uid": "019",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "020": {
@@ -443,10 +555,12 @@
       "teisatsu": 119.0,
       "tousotsu": 88
     },
-    "name": "",
+    "name": "Nikkari Aoe Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "020",
     "up": { "dageki": 4, "kidou": 2, "shouryoku": 0, "tousotsu": 4 }
   },
   "023": {
@@ -473,10 +587,21 @@
       "teisatsu": 41.0,
       "tousotsu": 45
     },
-    "name": "",
+    "name": "Nakigitsune",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 43,
+      "hissatsu": 35,
+      "impei": 41,
+      "kidou": 43,
+      "seizon": 43,
+      "shouryoku": 34,
+      "teisatsu": 41,
+      "tousotsu": 42
+    },
     "toku_max_status": {
       "dageki": 58,
       "hissatsu": 35,
@@ -487,6 +612,7 @@
       "teisatsu": 46.0,
       "tousotsu": 50
     },
+    "uid": "023",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "024": {
@@ -513,10 +639,12 @@
       "teisatsu": 90.0,
       "tousotsu": 98
     },
-    "name": "",
+    "name": "Nakigitsune Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "024",
     "up": { "dageki": 0, "kidou": 0, "shouryoku": 0, "tousotsu": 0 }
   },
   "025": {
@@ -543,10 +671,21 @@
       "teisatsu": 33.0,
       "tousotsu": 66
     },
-    "name": "",
+    "name": "Ichigo Hitofuri",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 55,
+      "hissatsu": 30,
+      "impei": 31,
+      "kidou": 36,
+      "seizon": 54,
+      "shouryoku": 48,
+      "teisatsu": 36,
+      "tousotsu": 58
+    },
     "toku_max_status": {
       "dageki": 70,
       "hissatsu": 30,
@@ -557,6 +696,7 @@
       "teisatsu": 39.0,
       "tousotsu": 72
     },
+    "uid": "025",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 1, "tousotsu": 2 }
   },
   "027": {
@@ -583,10 +723,21 @@
       "teisatsu": 47.0,
       "tousotsu": 45
     },
-    "name": "",
+    "name": "Namazuo Toshiro",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 32,
+      "hissatsu": 47,
+      "impei": 46,
+      "kidou": 38,
+      "seizon": 32,
+      "shouryoku": 30,
+      "teisatsu": 45,
+      "tousotsu": 32
+    },
     "toku_max_status": {
       "dageki": 45,
       "hissatsu": 47,
@@ -597,6 +748,7 @@
       "teisatsu": 52.0,
       "tousotsu": 45
     },
+    "uid": "027",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "028": {
@@ -623,10 +775,12 @@
       "teisatsu": 112.0,
       "tousotsu": 87
     },
-    "name": "",
+    "name": "Namazuo Toshiro Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "028",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 0, "tousotsu": 4 }
   },
   "029": {
@@ -653,10 +807,21 @@
       "teisatsu": 44.0,
       "tousotsu": 43
     },
-    "name": "",
+    "name": "Honebami Toshiro",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 33,
+      "hissatsu": 49,
+      "impei": 43,
+      "kidou": 45,
+      "seizon": 37,
+      "shouryoku": 27,
+      "teisatsu": 43,
+      "tousotsu": 34
+    },
     "toku_max_status": {
       "dageki": 47,
       "hissatsu": 49,
@@ -667,6 +832,7 @@
       "teisatsu": 49.0,
       "tousotsu": 48
     },
+    "uid": "029",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "030": {
@@ -693,10 +859,12 @@
       "teisatsu": 106.0,
       "tousotsu": 90
     },
-    "name": "",
+    "name": "Honebami Toshiro Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "030",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 0, "tousotsu": 4 }
   },
   "031": {
@@ -723,10 +891,21 @@
       "teisatsu": 44.0,
       "tousotsu": 41
     },
-    "name": "",
+    "name": "Hirano Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 21,
+      "hissatsu": 37,
+      "impei": 38,
+      "kidou": 32,
+      "seizon": 32,
+      "shouryoku": 22,
+      "teisatsu": 38,
+      "tousotsu": 33
+    },
     "toku_max_status": {
       "dageki": 32,
       "hissatsu": 37,
@@ -737,6 +916,7 @@
       "teisatsu": 48.0,
       "tousotsu": 45
     },
+    "uid": "031",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 1, "tousotsu": 0 }
   },
   "032": {
@@ -763,10 +943,12 @@
       "teisatsu": 115.0,
       "tousotsu": 78
     },
-    "name": "",
+    "name": "Hirano Toshiro Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "032",
     "up": { "dageki": 0, "kidou": 4, "shouryoku": 2, "tousotsu": 0 }
   },
   "033": {
@@ -793,10 +975,21 @@
       "teisatsu": 43.0,
       "tousotsu": 38
     },
-    "name": "",
+    "name": "Atsushi Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 22,
+      "hissatsu": 35,
+      "impei": 38,
+      "kidou": 33,
+      "seizon": 33,
+      "shouryoku": 20,
+      "teisatsu": 38,
+      "tousotsu": 32
+    },
     "toku_max_status": {
       "dageki": 32,
       "hissatsu": 35,
@@ -807,6 +1000,7 @@
       "teisatsu": 47.0,
       "tousotsu": 42
     },
+    "uid": "033",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 1, "tousotsu": 0 }
   },
   "034": {
@@ -833,10 +1027,12 @@
       "teisatsu": 110.0,
       "tousotsu": 84
     },
-    "name": "",
+    "name": "Atsushi Toshiro Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "034",
     "up": { "dageki": 0, "kidou": 4, "shouryoku": 2, "tousotsu": 0 }
   },
   "035": {
@@ -863,10 +1059,21 @@
       "teisatsu": 46.0,
       "tousotsu": 39
     },
-    "name": "",
+    "name": "Goto Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 24,
+      "hissatsu": 37,
+      "impei": 38,
+      "kidou": 28,
+      "seizon": 33,
+      "shouryoku": 28,
+      "teisatsu": 40,
+      "tousotsu": 34
+    },
     "toku_max_status": {
       "dageki": 35,
       "hissatsu": 37,
@@ -877,6 +1084,7 @@
       "teisatsu": 51.0,
       "tousotsu": 44
     },
+    "uid": "035",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 1, "tousotsu": 0 }
   },
   "036": {
@@ -903,10 +1111,12 @@
       "teisatsu": 113.0,
       "tousotsu": 82
     },
-    "name": "",
+    "name": "Goto Toshiro Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "036",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 2, "tousotsu": 0 }
   },
   "037": {
@@ -933,10 +1143,21 @@
       "teisatsu": 47.0,
       "tousotsu": 39
     },
-    "name": "",
+    "name": "Shinano Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 20,
+      "hissatsu": 35,
+      "impei": 44,
+      "kidou": 30,
+      "seizon": 33,
+      "shouryoku": 25,
+      "teisatsu": 39,
+      "tousotsu": 32
+    },
     "toku_max_status": {
       "dageki": 27,
       "hissatsu": 35,
@@ -947,6 +1168,7 @@
       "teisatsu": 52.0,
       "tousotsu": 44
     },
+    "uid": "037",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 1, "tousotsu": 0 }
   },
   "038": {
@@ -973,10 +1195,12 @@
       "teisatsu": 120.0,
       "tousotsu": 80
     },
-    "name": "",
+    "name": "Shinano Toshiro Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "038",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 2, "tousotsu": 0 }
   },
   "039": {
@@ -1003,10 +1227,21 @@
       "teisatsu": 44.0,
       "tousotsu": 37
     },
-    "name": "",
+    "name": "Maeda Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 22,
+      "hissatsu": 37,
+      "impei": 38,
+      "kidou": 27,
+      "seizon": 33,
+      "shouryoku": 18,
+      "teisatsu": 38,
+      "tousotsu": 32
+    },
     "toku_max_status": {
       "dageki": 31,
       "hissatsu": 37,
@@ -1017,6 +1252,7 @@
       "teisatsu": 48.0,
       "tousotsu": 41
     },
+    "uid": "039",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 1, "tousotsu": 0 }
   },
   "040": {
@@ -1043,10 +1279,12 @@
       "teisatsu": 112.0,
       "tousotsu": 83
     },
-    "name": "",
+    "name": "Maeda Toshiro Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "040",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 2, "tousotsu": 0 }
   },
   "041": {
@@ -1073,10 +1311,21 @@
       "teisatsu": 42.0,
       "tousotsu": 38
     },
-    "name": "",
+    "name": "Akita Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 19,
+      "hissatsu": 38,
+      "impei": 38,
+      "kidou": 28,
+      "seizon": 31,
+      "shouryoku": 22,
+      "teisatsu": 38,
+      "tousotsu": 33
+    },
     "toku_max_status": {
       "dageki": 30,
       "hissatsu": 38,
@@ -1087,6 +1336,7 @@
       "teisatsu": 46.0,
       "tousotsu": 42
     },
+    "uid": "041",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 2, "tousotsu": 0 }
   },
   "042": {
@@ -1113,10 +1363,12 @@
       "teisatsu": 113.0,
       "tousotsu": 83
     },
-    "name": "",
+    "name": "Akita Toshiro Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "042",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 4, "tousotsu": 0 }
   },
   "043": {
@@ -1143,10 +1395,21 @@
       "teisatsu": 54.0,
       "tousotsu": 34
     },
-    "name": "",
+    "name": "Hakata Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 19,
+      "hissatsu": 33,
+      "impei": 38,
+      "kidou": 26,
+      "seizon": 33,
+      "shouryoku": 20,
+      "teisatsu": 37,
+      "tousotsu": 27
+    },
     "toku_max_status": {
       "dageki": 30,
       "hissatsu": 33,
@@ -1157,6 +1420,7 @@
       "teisatsu": 58.0,
       "tousotsu": 38
     },
+    "uid": "043",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 1, "tousotsu": 0 }
   },
   "044": {
@@ -1183,10 +1447,12 @@
       "teisatsu": 122.0,
       "tousotsu": 74
     },
-    "name": "",
+    "name": "Hakata Toshiro Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "044",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 2, "tousotsu": 0 }
   },
   "045": {
@@ -1213,10 +1479,21 @@
       "teisatsu": 45.0,
       "tousotsu": 36
     },
-    "name": "",
+    "name": "Midare Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 22,
+      "hissatsu": 35,
+      "impei": 39,
+      "kidou": 29,
+      "seizon": 32,
+      "shouryoku": 21,
+      "teisatsu": 39,
+      "tousotsu": 29
+    },
     "toku_max_status": {
       "dageki": 31,
       "hissatsu": 35,
@@ -1227,6 +1504,7 @@
       "teisatsu": 49.0,
       "tousotsu": 40
     },
+    "uid": "045",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 1, "tousotsu": 0 }
   },
   "046": {
@@ -1253,10 +1531,12 @@
       "teisatsu": 114.0,
       "tousotsu": 76
     },
-    "name": "",
+    "name": "Midare Toshiro Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "046",
     "up": { "dageki": 0, "kidou": 4, "shouryoku": 2, "tousotsu": 0 }
   },
   "047": {
@@ -1283,10 +1563,21 @@
       "teisatsu": 44.0,
       "tousotsu": 35
     },
-    "name": "",
+    "name": "Gokotai",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 19,
+      "hissatsu": 40,
+      "impei": 39,
+      "kidou": 29,
+      "seizon": 31,
+      "shouryoku": 20,
+      "teisatsu": 39,
+      "tousotsu": 31
+    },
     "toku_max_status": {
       "dageki": 27,
       "hissatsu": 40,
@@ -1297,6 +1588,7 @@
       "teisatsu": 48.0,
       "tousotsu": 39
     },
+    "uid": "047",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 1, "tousotsu": 0 }
   },
   "048": {
@@ -1323,10 +1615,12 @@
       "teisatsu": 115.0,
       "tousotsu": 75
     },
-    "name": "",
+    "name": "Gokotai Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "048",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 2, "tousotsu": 0 }
   },
   "049": {
@@ -1353,10 +1647,21 @@
       "teisatsu": 39.0,
       "tousotsu": 38
     },
-    "name": "",
+    "name": "Yagen Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 18,
+      "hissatsu": 40,
+      "impei": 39,
+      "kidou": 27,
+      "seizon": 31,
+      "shouryoku": 21,
+      "teisatsu": 39,
+      "tousotsu": 33
+    },
     "toku_max_status": {
       "dageki": 28,
       "hissatsu": 40,
@@ -1367,6 +1672,7 @@
       "teisatsu": 47.0,
       "tousotsu": 42
     },
+    "uid": "049",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 1, "tousotsu": 0 }
   },
   "050": {
@@ -1393,10 +1699,12 @@
       "teisatsu": 119.0,
       "tousotsu": 79
     },
-    "name": "",
+    "name": "Yagen Toshiro Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "050",
     "up": { "dageki": 0, "kidou": 4, "shouryoku": 2, "tousotsu": 0 }
   },
   "051": {
@@ -1423,10 +1731,21 @@
       "teisatsu": 40.0,
       "tousotsu": 35
     },
-    "name": "",
+    "name": "Hocho Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 22,
+      "hissatsu": 40,
+      "impei": 45,
+      "kidou": 40,
+      "seizon": 28,
+      "shouryoku": 30,
+      "teisatsu": 45,
+      "tousotsu": 28
+    },
     "toku_max_status": {
       "dageki": 34,
       "hissatsu": 40,
@@ -1437,6 +1756,7 @@
       "teisatsu": 52.0,
       "tousotsu": 40
     },
+    "uid": "051",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 1, "tousotsu": 0 }
   },
   "052": {
@@ -1463,10 +1783,12 @@
       "teisatsu": 109.0,
       "tousotsu": 76
     },
-    "name": "",
+    "name": "Hocho Toshiro Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "052",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 2, "tousotsu": 0 }
   },
   "053": {
@@ -1493,10 +1815,21 @@
       "teisatsu": 26.0,
       "tousotsu": 64
     },
-    "name": "",
+    "name": "Okanehira",
     "range": "狭",
     "rarelity": 5,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 63,
+      "hissatsu": 43,
+      "impei": 27,
+      "kidou": 29,
+      "seizon": 57,
+      "shouryoku": 51,
+      "teisatsu": 26,
+      "tousotsu": 58
+    },
     "toku_max_status": {
       "dageki": 75,
       "hissatsu": 43,
@@ -1507,6 +1840,7 @@
       "teisatsu": 32.0,
       "tousotsu": 70
     },
+    "uid": "053",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "055": {
@@ -1533,10 +1867,21 @@
       "teisatsu": 32.0,
       "tousotsu": 63
     },
-    "name": "",
+    "name": "Uguisumaru",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 57,
+      "hissatsu": 28,
+      "impei": 33,
+      "kidou": 37,
+      "seizon": 56,
+      "shouryoku": 45,
+      "teisatsu": 36,
+      "tousotsu": 54
+    },
     "toku_max_status": {
       "dageki": 71,
       "hissatsu": 28,
@@ -1547,6 +1892,7 @@
       "teisatsu": 38.0,
       "tousotsu": 69
     },
+    "uid": "055",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "057": {
@@ -1573,10 +1919,21 @@
       "teisatsu": 35.0,
       "tousotsu": 61
     },
-    "name": "",
+    "name": "Akashi Kuniyuki",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 49,
+      "hissatsu": 26,
+      "impei": 36,
+      "kidou": 49,
+      "seizon": 48,
+      "shouryoku": 38,
+      "teisatsu": 36,
+      "tousotsu": 53
+    },
     "toku_max_status": {
       "dageki": 63,
       "hissatsu": 26,
@@ -1587,6 +1944,7 @@
       "teisatsu": 41.0,
       "tousotsu": 67
     },
+    "uid": "057",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 1, "tousotsu": 2 }
   },
   "059": {
@@ -1613,10 +1971,21 @@
       "teisatsu": 15.0,
       "tousotsu": 71
     },
-    "name": "",
+    "name": "Hotarumaru",
     "range": "広",
     "rarelity": 4,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 60,
+      "hissatsu": 29,
+      "impei": 28,
+      "kidou": 18,
+      "seizon": 63,
+      "shouryoku": 51,
+      "teisatsu": 17,
+      "tousotsu": 60
+    },
     "toku_max_status": {
       "dageki": 81,
       "hissatsu": 29,
@@ -1627,6 +1996,7 @@
       "teisatsu": 18.0,
       "tousotsu": 74
     },
+    "uid": "059",
     "up": { "dageki": 3, "kidou": 1, "shouryoku": 1, "tousotsu": 3 }
   },
   "060": {
@@ -1653,10 +2023,12 @@
       "teisatsu": 50.0,
       "tousotsu": 123
     },
-    "name": "",
+    "name": "Hotarumaru Kiwami",
     "range": "広",
     "rarelity": 5,
     "slot": 3,
+    "toku": 100,
+    "uid": "060",
     "up": { "dageki": 6, "kidou": 2, "shouryoku": 2, "tousotsu": 6 }
   },
   "061": {
@@ -1683,10 +2055,21 @@
       "teisatsu": 43.0,
       "tousotsu": 34
     },
-    "name": "",
+    "name": "Aizen Kunitoshi",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 17,
+      "hissatsu": 39,
+      "impei": 39,
+      "kidou": 36,
+      "seizon": 33,
+      "shouryoku": 22,
+      "teisatsu": 38,
+      "tousotsu": 28
+    },
     "toku_max_status": {
       "dageki": 27,
       "hissatsu": 39,
@@ -1697,6 +2080,7 @@
       "teisatsu": 47.0,
       "tousotsu": 38
     },
+    "uid": "061",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 1, "tousotsu": 0 }
   },
   "062": {
@@ -1723,10 +2107,12 @@
       "teisatsu": 115.0,
       "tousotsu": 76
     },
-    "name": "",
+    "name": "Aizen Kunitoshi Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "062",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 2, "tousotsu": 0 }
   },
   "063": {
@@ -1753,10 +2139,21 @@
       "teisatsu": 36.0,
       "tousotsu": 62
     },
-    "name": "",
+    "name": "Sengo Muramasa",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 63,
+      "hissatsu": 40,
+      "impei": 25,
+      "kidou": 24,
+      "seizon": 52,
+      "shouryoku": 52,
+      "teisatsu": 35,
+      "tousotsu": 53
+    },
     "toku_max_status": {
       "dageki": 73,
       "hissatsu": 40,
@@ -1767,6 +2164,7 @@
       "teisatsu": 40.0,
       "tousotsu": 66
     },
+    "uid": "063",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "064": {
@@ -1793,10 +2191,12 @@
       "teisatsu": 76.0,
       "tousotsu": 105
     },
-    "name": "",
+    "name": "Sengo Muramasa Kiwami",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 100,
+    "uid": "064",
     "up": { "dageki": 4, "kidou": 2, "shouryoku": 0, "tousotsu": 2 }
   },
   "065": {
@@ -1823,10 +2223,21 @@
       "teisatsu": 16.0,
       "tousotsu": 58
     },
-    "name": "",
+    "name": "Tombokiri",
     "range": "縦",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 61,
+      "hissatsu": 30,
+      "impei": 33,
+      "kidou": 17,
+      "seizon": 67,
+      "shouryoku": 53,
+      "teisatsu": 17,
+      "tousotsu": 58
+    },
     "toku_max_status": {
       "dageki": 76,
       "hissatsu": 30,
@@ -1837,6 +2248,7 @@
       "teisatsu": 21.0,
       "tousotsu": 63
     },
+    "uid": "065",
     "up": { "dageki": 1, "kidou": 0, "shouryoku": 3, "tousotsu": 0 }
   },
   "066": {
@@ -1863,10 +2275,12 @@
       "teisatsu": 50.0,
       "tousotsu": 87
     },
-    "name": "",
+    "name": "Tombokiri Kiwami",
     "range": "縦",
     "rarelity": 4,
     "slot": 3,
+    "toku": 100,
+    "uid": "066",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 6, "tousotsu": 0 }
   },
   "067": {
@@ -1893,10 +2307,21 @@
       "teisatsu": 46.0,
       "tousotsu": 53
     },
-    "name": "",
+    "name": "Monoyoshi Sadamune",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 30,
+      "hissatsu": 50,
+      "impei": 30,
+      "kidou": 43,
+      "seizon": 39,
+      "shouryoku": 43,
+      "teisatsu": 43,
+      "tousotsu": 35
+    },
     "toku_max_status": {
       "dageki": 41,
       "hissatsu": 50,
@@ -1907,6 +2332,7 @@
       "teisatsu": 51.0,
       "tousotsu": 60
     },
+    "uid": "067",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "068": {
@@ -1933,10 +2359,12 @@
       "teisatsu": 110.0,
       "tousotsu": 105
     },
-    "name": "",
+    "name": "Monoyoshi Sadamune Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "068",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 0, "tousotsu": 4 }
   },
   "069": {
@@ -1963,10 +2391,21 @@
       "teisatsu": 50.0,
       "tousotsu": 39
     },
-    "name": "",
+    "name": "Taikogane Sadamune",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 20,
+      "hissatsu": 42,
+      "impei": 39,
+      "kidou": 30,
+      "seizon": 28,
+      "shouryoku": 22,
+      "teisatsu": 41,
+      "tousotsu": 25
+    },
     "toku_max_status": {
       "dageki": 31,
       "hissatsu": 42,
@@ -1977,6 +2416,7 @@
       "teisatsu": 55.0,
       "tousotsu": 44
     },
+    "uid": "069",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 1, "tousotsu": 0 }
   },
   "070": {
@@ -2003,10 +2443,12 @@
       "teisatsu": 121.0,
       "tousotsu": 80
     },
-    "name": "",
+    "name": "Taikogane Sadamune Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "070",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 2, "tousotsu": 0 }
   },
   "071": {
@@ -2033,10 +2475,21 @@
       "teisatsu": 37.0,
       "tousotsu": 50
     },
-    "name": "",
+    "name": "Kikko Sadamune",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 42,
+      "hissatsu": 37,
+      "impei": 40,
+      "kidou": 39,
+      "seizon": 50,
+      "shouryoku": 45,
+      "teisatsu": 36,
+      "tousotsu": 43
+    },
     "toku_max_status": {
       "dageki": 54,
       "hissatsu": 37,
@@ -2047,6 +2500,7 @@
       "teisatsu": 42.0,
       "tousotsu": 55
     },
+    "uid": "071",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "072": {
@@ -2073,10 +2527,12 @@
       "teisatsu": 83.0,
       "tousotsu": 97
     },
-    "name": "",
+    "name": "Kikko Sadamune Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "072",
     "up": { "dageki": 2, "kidou": 2, "shouryoku": 0, "tousotsu": 2 }
   },
   "073": {
@@ -2103,10 +2559,21 @@
       "teisatsu": 31.0,
       "tousotsu": 66
     },
-    "name": "",
+    "name": "Shokudaigiri Mitsutada",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 57,
+      "hissatsu": 30,
+      "impei": 30,
+      "kidou": 34,
+      "seizon": 58,
+      "shouryoku": 44,
+      "teisatsu": 34,
+      "tousotsu": 57
+    },
     "toku_max_status": {
       "dageki": 73,
       "hissatsu": 30,
@@ -2117,6 +2584,7 @@
       "teisatsu": 37.0,
       "tousotsu": 72
     },
+    "uid": "073",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "075": {
@@ -2143,10 +2611,21 @@
       "teisatsu": 22.0,
       "tousotsu": 66
     },
-    "name": "",
+    "name": "Ohannya Nagamitsu",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 55,
+      "hissatsu": 31,
+      "impei": 36,
+      "kidou": 38,
+      "seizon": 61,
+      "shouryoku": 41,
+      "teisatsu": 28,
+      "tousotsu": 56
+    },
     "toku_max_status": {
       "dageki": 70,
       "hissatsu": 31,
@@ -2157,6 +2636,7 @@
       "teisatsu": 28.0,
       "tousotsu": 72
     },
+    "uid": "075",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 0, "tousotsu": 2 }
   },
   "077": {
@@ -2183,10 +2663,21 @@
       "teisatsu": 38.0,
       "tousotsu": 68
     },
-    "name": "",
+    "name": "Koryu Kagemitsu",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 55,
+      "hissatsu": 27,
+      "impei": 27,
+      "kidou": 49,
+      "seizon": 60,
+      "shouryoku": 41,
+      "teisatsu": 41,
+      "tousotsu": 64
+    },
     "toku_max_status": {
       "dageki": 70,
       "hissatsu": 27,
@@ -2197,6 +2688,7 @@
       "teisatsu": 44.0,
       "tousotsu": 74
     },
+    "uid": "077",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "079": {
@@ -2223,10 +2715,21 @@
       "teisatsu": 29.0,
       "tousotsu": 64
     },
-    "name": "",
+    "name": "Kosetsu Samonji",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 57,
+      "hissatsu": 30,
+      "impei": 32,
+      "kidou": 37,
+      "seizon": 57,
+      "shouryoku": 47,
+      "teisatsu": 33,
+      "tousotsu": 55
+    },
     "toku_max_status": {
       "dageki": 72,
       "hissatsu": 30,
@@ -2237,6 +2740,7 @@
       "teisatsu": 35.0,
       "tousotsu": 70
     },
+    "uid": "079",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "081": {
@@ -2263,10 +2767,21 @@
       "teisatsu": 37.0,
       "tousotsu": 42
     },
-    "name": "",
+    "name": "Soza Samonji",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 39,
+      "hissatsu": 30,
+      "impei": 39,
+      "kidou": 38,
+      "seizon": 37,
+      "shouryoku": 31,
+      "teisatsu": 38,
+      "tousotsu": 39
+    },
     "toku_max_status": {
       "dageki": 53,
       "hissatsu": 30,
@@ -2277,6 +2792,7 @@
       "teisatsu": 42.0,
       "tousotsu": 47
     },
+    "uid": "081",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 1, "tousotsu": 1 }
   },
   "082": {
@@ -2303,10 +2819,12 @@
       "teisatsu": 82.0,
       "tousotsu": 97
     },
-    "name": "",
+    "name": "Soza Samonji Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "082",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 1, "tousotsu": 1 }
   },
   "083": {
@@ -2333,10 +2851,21 @@
       "teisatsu": 43.0,
       "tousotsu": 40
     },
-    "name": "",
+    "name": "Sayo Samonji",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 24,
+      "hissatsu": 42,
+      "impei": 39,
+      "kidou": 24,
+      "seizon": 36,
+      "shouryoku": 20,
+      "teisatsu": 39,
+      "tousotsu": 33
+    },
     "toku_max_status": {
       "dageki": 33,
       "hissatsu": 42,
@@ -2347,6 +2876,7 @@
       "teisatsu": 47.0,
       "tousotsu": 44
     },
+    "uid": "083",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 1, "tousotsu": 0 }
   },
   "084": {
@@ -2373,10 +2903,12 @@
       "teisatsu": 112.0,
       "tousotsu": 80
     },
-    "name": "",
+    "name": "Sayo Samonji Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "084",
     "up": { "dageki": 0, "kidou": 4, "shouryoku": 2, "tousotsu": 0 }
   },
   "085": {
@@ -2403,10 +2935,21 @@
       "teisatsu": 41.0,
       "tousotsu": 45
     },
-    "name": "",
+    "name": "Kashu Kiyomitsu",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 39,
+      "hissatsu": 41,
+      "impei": 42,
+      "kidou": 42,
+      "seizon": 38,
+      "shouryoku": 31,
+      "teisatsu": 41,
+      "tousotsu": 41
+    },
     "toku_max_status": {
       "dageki": 55,
       "hissatsu": 41,
@@ -2417,6 +2960,7 @@
       "teisatsu": 46.0,
       "tousotsu": 50
     },
+    "uid": "085",
     "up": { "dageki": 1, "kidou": 0, "shouryoku": 0, "tousotsu": 1 }
   },
   "086": {
@@ -2443,10 +2987,12 @@
       "teisatsu": 90.0,
       "tousotsu": 96
     },
-    "name": "",
+    "name": "Kashu Kiyomitsu Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "086",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 0, "tousotsu": 2 }
   },
   "087": {
@@ -2473,10 +3019,21 @@
       "teisatsu": 38.0,
       "tousotsu": 45
     },
-    "name": "",
+    "name": "Yamatonokami Yasusada",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 42,
+      "hissatsu": 38,
+      "impei": 39,
+      "kidou": 38,
+      "seizon": 42,
+      "shouryoku": 31,
+      "teisatsu": 39,
+      "tousotsu": 39
+    },
     "toku_max_status": {
       "dageki": 56,
       "hissatsu": 38,
@@ -2487,6 +3044,7 @@
       "teisatsu": 43.0,
       "tousotsu": 50
     },
+    "uid": "087",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "088": {
@@ -2513,10 +3071,12 @@
       "teisatsu": 79.0,
       "tousotsu": 96
     },
-    "name": "",
+    "name": "Yamatonokami Yasusada Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "088",
     "up": { "dageki": 2, "kidou": 2, "shouryoku": 0, "tousotsu": 2 }
   },
   "089": {
@@ -2543,10 +3103,21 @@
       "teisatsu": 37.0,
       "tousotsu": 45
     },
-    "name": "",
+    "name": "Kasen Kanesada",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 44,
+      "hissatsu": 30,
+      "impei": 39,
+      "kidou": 41,
+      "seizon": 40,
+      "shouryoku": 31,
+      "teisatsu": 38,
+      "tousotsu": 40
+    },
     "toku_max_status": {
       "dageki": 59,
       "hissatsu": 30,
@@ -2557,6 +3128,7 @@
       "teisatsu": 42.0,
       "tousotsu": 50
     },
+    "uid": "089",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 0 }
   },
   "090": {
@@ -2583,10 +3155,12 @@
       "teisatsu": 82.0,
       "tousotsu": 90
     },
-    "name": "",
+    "name": "Kasen Kanesada Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "090",
     "up": { "dageki": 2, "kidou": 2, "shouryoku": 0, "tousotsu": 0 }
   },
   "091": {
@@ -2613,10 +3187,21 @@
       "teisatsu": 32.0,
       "tousotsu": 63
     },
-    "name": "",
+    "name": "Izuminokami Kanesada",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 54,
+      "hissatsu": 35,
+      "impei": 31,
+      "kidou": 36,
+      "seizon": 56,
+      "shouryoku": 46,
+      "teisatsu": 36,
+      "tousotsu": 54
+    },
     "toku_max_status": {
       "dageki": 70,
       "hissatsu": 35,
@@ -2627,6 +3212,7 @@
       "teisatsu": 38.0,
       "tousotsu": 69
     },
+    "uid": "091",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "092": {
@@ -2653,10 +3239,12 @@
       "teisatsu": 76.0,
       "tousotsu": 114
     },
-    "name": "",
+    "name": "Izuminokami kanesada Kiwami",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 100,
+    "uid": "092",
     "up": { "dageki": 4, "kidou": 2, "shouryoku": 0, "tousotsu": 4 }
   },
   "093": {
@@ -2683,10 +3271,21 @@
       "teisatsu": 39.0,
       "tousotsu": 42
     },
-    "name": "",
+    "name": "Mutsunokami Yoshiyuki",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 45,
+      "hissatsu": 34,
+      "impei": 40,
+      "kidou": 38,
+      "seizon": 41,
+      "shouryoku": 33,
+      "teisatsu": 40,
+      "tousotsu": 39
+    },
     "toku_max_status": {
       "dageki": 61,
       "hissatsu": 34,
@@ -2697,6 +3296,7 @@
       "teisatsu": 44.0,
       "tousotsu": 47
     },
+    "uid": "093",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 0 }
   },
   "094": {
@@ -2723,10 +3323,12 @@
       "teisatsu": 88.0,
       "tousotsu": 100
     },
-    "name": "",
+    "name": "Mutsunokami Yoshiyuki",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "094",
     "up": { "dageki": 2, "kidou": 2, "shouryoku": 0, "tousotsu": 0 }
   },
   "095": {
@@ -2753,10 +3355,21 @@
       "teisatsu": 40.0,
       "tousotsu": 44
     },
-    "name": "",
+    "name": "Yamambagiri Kunihiro",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 41,
+      "hissatsu": 35,
+      "impei": 41,
+      "kidou": 44,
+      "seizon": 39,
+      "shouryoku": 33,
+      "teisatsu": 40,
+      "tousotsu": 41
+    },
     "toku_max_status": {
       "dageki": 58,
       "hissatsu": 35,
@@ -2767,6 +3380,7 @@
       "teisatsu": 45.0,
       "tousotsu": 49
     },
+    "uid": "095",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "096": {
@@ -2793,10 +3407,12 @@
       "teisatsu": 88.0,
       "tousotsu": 96
     },
-    "name": "",
+    "name": "Yamambagiri Kunihiro",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "096",
     "up": { "dageki": 2, "kidou": 2, "shouryoku": 0, "tousotsu": 2 }
   },
   "097": {
@@ -2823,10 +3439,21 @@
       "teisatsu": 28.0,
       "tousotsu": 60
     },
-    "name": "",
+    "name": "Yamabushi Kunihiro",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 57,
+      "hissatsu": 28,
+      "impei": 30,
+      "kidou": 37,
+      "seizon": 57,
+      "shouryoku": 42,
+      "teisatsu": 31,
+      "tousotsu": 51
+    },
     "toku_max_status": {
       "dageki": 72,
       "hissatsu": 28,
@@ -2837,6 +3464,7 @@
       "teisatsu": 34.0,
       "tousotsu": 66
     },
+    "uid": "097",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "099": {
@@ -2863,10 +3491,21 @@
       "teisatsu": 48.0,
       "tousotsu": 38
     },
-    "name": "",
+    "name": "Horikawa Kunihiro",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 33,
+      "hissatsu": 45,
+      "impei": 46,
+      "kidou": 41,
+      "seizon": 34,
+      "shouryoku": 25,
+      "teisatsu": 46,
+      "tousotsu": 31
+    },
     "toku_max_status": {
       "dageki": 47,
       "hissatsu": 45,
@@ -2877,6 +3516,7 @@
       "teisatsu": 53.0,
       "tousotsu": 43
     },
+    "uid": "099",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 0, "tousotsu": 1 }
   },
   "100": {
@@ -2903,10 +3543,12 @@
       "teisatsu": 114.0,
       "tousotsu": 85
     },
-    "name": "",
+    "name": "Horikawa Kunihiro Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "100",
     "up": { "dageki": 0, "kidou": 4, "shouryoku": 0, "tousotsu": 2 }
   },
   "101": {
@@ -2933,10 +3575,21 @@
       "teisatsu": 38.0,
       "tousotsu": 47
     },
-    "name": "",
+    "name": "Hachisuka Kotetsu",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 44,
+      "hissatsu": 31,
+      "impei": 41,
+      "kidou": 42,
+      "seizon": 45,
+      "shouryoku": 33,
+      "teisatsu": 40,
+      "tousotsu": 44
+    },
     "toku_max_status": {
       "dageki": 60,
       "hissatsu": 31,
@@ -2947,6 +3600,7 @@
       "teisatsu": 44.0,
       "tousotsu": 53
     },
+    "uid": "101",
     "up": { "dageki": 3, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "102": {
@@ -2973,10 +3627,12 @@
       "teisatsu": 86.0,
       "tousotsu": 97
     },
-    "name": "",
+    "name": "Hachisuka Kotetsu Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "102",
     "up": { "dageki": 6, "kidou": 2, "shouryoku": 0, "tousotsu": 2 }
   },
   "103": {
@@ -3003,10 +3659,21 @@
       "teisatsu": 48.0,
       "tousotsu": 45
     },
-    "name": "",
+    "name": "Urashima Kotetsu",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 30,
+      "hissatsu": 40,
+      "impei": 39,
+      "kidou": 35,
+      "seizon": 39,
+      "shouryoku": 35,
+      "teisatsu": 50,
+      "tousotsu": 35
+    },
     "toku_max_status": {
       "dageki": 44,
       "hissatsu": 40,
@@ -3017,6 +3684,7 @@
       "teisatsu": 53.0,
       "tousotsu": 50
     },
+    "uid": "103",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "104": {
@@ -3043,10 +3711,12 @@
       "teisatsu": 114.0,
       "tousotsu": 95
     },
-    "name": "",
+    "name": "Urashima Kotetsu Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "104",
     "up": { "dageki": 2, "kidou": 2, "shouryoku": 0, "tousotsu": 2 }
   },
   "105": {
@@ -3073,10 +3743,21 @@
       "teisatsu": 37.0,
       "tousotsu": 48
     },
-    "name": "",
+    "name": "Nagasone Kotetsu",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 48,
+      "hissatsu": 30,
+      "impei": 39,
+      "kidou": 36,
+      "seizon": 50,
+      "shouryoku": 35,
+      "teisatsu": 40,
+      "tousotsu": 43
+    },
     "toku_max_status": {
       "dageki": 68,
       "hissatsu": 30,
@@ -3087,6 +3768,7 @@
       "teisatsu": 42.0,
       "tousotsu": 53
     },
+    "uid": "105",
     "up": { "dageki": 3, "kidou": 0, "shouryoku": 1, "tousotsu": 1 }
   },
   "106": {
@@ -3113,10 +3795,12 @@
       "teisatsu": 77.0,
       "tousotsu": 104
     },
-    "name": "",
+    "name": "Nagasone Kotetsu Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "106",
     "up": { "dageki": 3, "kidou": 0, "shouryoku": 1, "tousotsu": 1 }
   },
   "107": {
@@ -3143,15 +3827,28 @@
       "teisatsu": 33.0,
       "tousotsu": 60
     },
-    "name": "",
+    "name": "Higekiri",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 25,
+    "uid": "107",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "108": {
     "display_name": "髭切 特",
     "initial_status": {
+      "dageki": 50,
+      "hissatsu": 34,
+      "impei": 24,
+      "kidou": 31,
+      "seizon": 49,
+      "shouryoku": 39,
+      "teisatsu": 29,
+      "tousotsu": 49
+    },
+    "kind": "太刀",
+    "max_status": {
       "dageki": 63,
       "hissatsu": 34,
       "impei": 24,
@@ -3161,26 +3858,28 @@
       "teisatsu": 34.0,
       "tousotsu": 64
     },
-    "kind": "太刀",
-    "max_status": {
-      "dageki": 0,
-      "hissatsu": 0,
-      "impei": 0,
-      "kidou": 0,
-      "seizon": 0,
-      "shouryoku": 0,
-      "teisatsu": 0,
-      "tousotsu": 0
-    },
-    "name": "",
+    "name": "Higekiri Toku",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
-    "up": { "dageki": 0, "kidou": 0, "shouryoku": 0, "tousotsu": 0 }
+    "toku": 50,
+    "uid": "108",
+    "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "109": {
     "display_name": "髭切 特二",
     "initial_status": {
+      "dageki": 52,
+      "hissatsu": 36,
+      "impei": 25,
+      "kidou": 32,
+      "seizon": 51,
+      "shouryoku": 41,
+      "teisatsu": 33,
+      "tousotsu": 52
+    },
+    "kind": "太刀",
+    "max_status": {
       "dageki": 65,
       "hissatsu": 36,
       "impei": 25,
@@ -3190,26 +3889,28 @@
       "teisatsu": 38.0,
       "tousotsu": 67
     },
-    "kind": "太刀",
-    "max_status": {
-      "dageki": 0,
-      "hissatsu": 0,
-      "impei": 0,
-      "kidou": 0,
-      "seizon": 0,
-      "shouryoku": 0,
-      "teisatsu": 0,
-      "tousotsu": 0
-    },
-    "name": "",
+    "name": "Higekiri Tokuni",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
-    "up": { "dageki": 0, "kidou": 0, "shouryoku": 0, "tousotsu": 0 }
+    "toku": 75,
+    "uid": "109",
+    "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "110": {
     "display_name": "髭切 特三",
     "initial_status": {
+      "dageki": 54,
+      "hissatsu": 38,
+      "impei": 26,
+      "kidou": 33,
+      "seizon": 53,
+      "shouryoku": 43,
+      "teisatsu": 38,
+      "tousotsu": 55
+    },
+    "kind": "太刀",
+    "max_status": {
       "dageki": 70,
       "hissatsu": 38,
       "impei": 26,
@@ -3219,22 +3920,13 @@
       "teisatsu": 43.0,
       "tousotsu": 70
     },
-    "kind": "太刀",
-    "max_status": {
-      "dageki": 0,
-      "hissatsu": 0,
-      "impei": 0,
-      "kidou": 0,
-      "seizon": 0,
-      "shouryoku": 0,
-      "teisatsu": 0,
-      "tousotsu": 0
-    },
-    "name": "",
+    "name": "Higekiri Tokusan",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
-    "up": { "dageki": 0, "kidou": 0, "shouryoku": 0, "tousotsu": 0 }
+    "toku": 100,
+    "uid": "110",
+    "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "112": {
     "display_name": "膝丸",
@@ -3260,15 +3952,28 @@
       "teisatsu": 27.0,
       "tousotsu": 60
     },
-    "name": "",
+    "name": "Hizamaru",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 25,
+    "uid": "112",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "113": {
     "display_name": "膝丸 特",
     "initial_status": {
+      "dageki": 50,
+      "hissatsu": 34,
+      "impei": 33,
+      "kidou": 38,
+      "seizon": 48,
+      "shouryoku": 39,
+      "teisatsu": 24,
+      "tousotsu": 46
+    },
+    "kind": "太刀",
+    "max_status": {
       "dageki": 63,
       "hissatsu": 34,
       "impei": 33,
@@ -3278,26 +3983,28 @@
       "teisatsu": 28.0,
       "tousotsu": 61
     },
-    "kind": "太刀",
-    "max_status": {
-      "dageki": 0,
-      "hissatsu": 0,
-      "impei": 0,
-      "kidou": 0,
-      "seizon": 0,
-      "shouryoku": 0,
-      "teisatsu": 0,
-      "tousotsu": 0
-    },
-    "name": "",
+    "name": "Hizamaru Toku",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
-    "up": { "dageki": 0, "kidou": 0, "shouryoku": 0, "tousotsu": 0 }
+    "toku": 50,
+    "uid": "113",
+    "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "114": {
     "display_name": "膝丸 特二",
     "initial_status": {
+      "dageki": 53,
+      "hissatsu": 36,
+      "impei": 37,
+      "kidou": 45,
+      "seizon": 53,
+      "shouryoku": 42,
+      "teisatsu": 25,
+      "tousotsu": 54
+    },
+    "kind": "太刀",
+    "max_status": {
       "dageki": 69,
       "hissatsu": 36,
       "impei": 37,
@@ -3307,22 +4014,13 @@
       "teisatsu": 29.0,
       "tousotsu": 69
     },
-    "kind": "太刀",
-    "max_status": {
-      "dageki": 0,
-      "hissatsu": 0,
-      "impei": 0,
-      "kidou": 0,
-      "seizon": 0,
-      "shouryoku": 0,
-      "teisatsu": 0,
-      "tousotsu": 0
-    },
-    "name": "",
+    "name": "Hizamaru Tokuni",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
-    "up": { "dageki": 0, "kidou": 0, "shouryoku": 0, "tousotsu": 0 }
+    "toku": 100,
+    "uid": "114",
+    "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "116": {
     "display_name": "大倶利伽羅",
@@ -3348,10 +4046,21 @@
       "teisatsu": 30.0,
       "tousotsu": 65
     },
-    "name": "",
+    "name": "Okurikara",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 52,
+      "hissatsu": 28,
+      "impei": 31,
+      "kidou": 33,
+      "seizon": 52,
+      "shouryoku": 47,
+      "teisatsu": 31,
+      "tousotsu": 56
+    },
     "toku_max_status": {
       "dageki": 69,
       "hissatsu": 28,
@@ -3362,6 +4071,7 @@
       "teisatsu": 34.0,
       "tousotsu": 69
     },
+    "uid": "116",
     "up": { "dageki": 2, "kidou": 1, "shouryoku": 0, "tousotsu": 2 }
   },
   "117": {
@@ -3388,10 +4098,12 @@
       "teisatsu": 75.0,
       "tousotsu": 108
     },
-    "name": "",
+    "name": "Okurikara Kiwami",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 100,
+    "uid": "117",
     "up": { "dageki": 4, "kidou": 2, "shouryoku": 0, "tousotsu": 4 }
   },
   "118": {
@@ -3418,10 +4130,21 @@
       "teisatsu": 39.0,
       "tousotsu": 44
     },
-    "name": "",
+    "name": "Heshikiri Hasebe",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 46,
+      "hissatsu": 33,
+      "impei": 38,
+      "kidou": 46,
+      "seizon": 45,
+      "shouryoku": 34,
+      "teisatsu": 38,
+      "tousotsu": 39
+    },
     "toku_max_status": {
       "dageki": 61,
       "hissatsu": 33,
@@ -3432,6 +4155,7 @@
       "teisatsu": 43.0,
       "tousotsu": 48
     },
+    "uid": "118",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 0 }
   },
   "119": {
@@ -3458,10 +4182,12 @@
       "teisatsu": 82.0,
       "tousotsu": 99
     },
-    "name": "",
+    "name": "Heshikiri Hasebe Kiwami",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 100,
+    "uid": "119",
     "up": { "dageki": 2, "kidou": 2, "shouryoku": 0, "tousotsu": 0 }
   },
   "120": {
@@ -3488,10 +4214,21 @@
       "teisatsu": 44.0,
       "tousotsu": 35
     },
-    "name": "",
+    "name": "Fudo Yukimitsu",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 22,
+      "hissatsu": 42,
+      "impei": 37,
+      "kidou": 27,
+      "seizon": 32,
+      "shouryoku": 22,
+      "teisatsu": 38,
+      "tousotsu": 29
+    },
     "toku_max_status": {
       "dageki": 34,
       "hissatsu": 42,
@@ -3502,6 +4239,7 @@
       "teisatsu": 49.0,
       "tousotsu": 40
     },
+    "uid": "120",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 1, "tousotsu": 0 }
   },
   "121": {
@@ -3528,10 +4266,12 @@
       "teisatsu": 118.0,
       "tousotsu": 79
     },
-    "name": "",
+    "name": "Fudo Yukimitsu Kiwami",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 100,
+    "uid": "121",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 2, "tousotsu": 0 }
   },
   "122": {
@@ -3558,10 +4298,21 @@
       "teisatsu": 27.0,
       "tousotsu": 66
     },
-    "name": "",
+    "name": "Shishio",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 53,
+      "hissatsu": 28,
+      "impei": 31,
+      "kidou": 37,
+      "seizon": 51,
+      "shouryoku": 47,
+      "teisatsu": 31,
+      "tousotsu": 55
+    },
     "toku_max_status": {
       "dageki": 66,
       "hissatsu": 28,
@@ -3572,6 +4323,7 @@
       "teisatsu": 33.0,
       "tousotsu": 72
     },
+    "uid": "122",
     "up": { "dageki": 3, "kidou": 0, "shouryoku": 0, "tousotsu": 1 }
   },
   "124": {
@@ -3598,10 +4350,21 @@
       "teisatsu": 34.0,
       "tousotsu": 59
     },
-    "name": "",
+    "name": "Kogarasumaru",
     "range": "狭",
     "rarelity": 5,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 53,
+      "hissatsu": 35,
+      "impei": 26,
+      "kidou": 43,
+      "seizon": 65,
+      "shouryoku": 40,
+      "teisatsu": 35,
+      "tousotsu": 51
+    },
     "toku_max_status": {
       "dageki": 65,
       "hissatsu": 35,
@@ -3612,6 +4375,7 @@
       "teisatsu": 40.0,
       "tousotsu": 65
     },
+    "uid": "124",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 0, "tousotsu": 2 }
   },
   "128": {
@@ -3638,10 +4402,21 @@
       "teisatsu": 33.0,
       "tousotsu": 62
     },
-    "name": "",
+    "name": "Dodanuki Masakuni",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 55,
+      "hissatsu": 30,
+      "impei": 28,
+      "kidou": 33,
+      "seizon": 49,
+      "shouryoku": 43,
+      "teisatsu": 33,
+      "tousotsu": 51
+    },
     "toku_max_status": {
       "dageki": 69,
       "hissatsu": 30,
@@ -3652,6 +4427,7 @@
       "teisatsu": 36.0,
       "tousotsu": 65
     },
+    "uid": "128",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 1, "tousotsu": 1 }
   },
   "129": {
@@ -3678,10 +4454,12 @@
       "teisatsu": 78.0,
       "tousotsu": 101
     },
-    "name": "",
+    "name": "Dodanuki Masakuni Kiwami",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 100,
+    "uid": "129",
     "up": { "dageki": 2, "kidou": 2, "shouryoku": 2, "tousotsu": 2 }
   },
   "130": {
@@ -3708,10 +4486,21 @@
       "teisatsu": 30.0,
       "tousotsu": 66
     },
-    "name": "",
+    "name": "Tsurumaru Kuninaga",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 54,
+      "hissatsu": 32,
+      "impei": 29,
+      "kidou": 34,
+      "seizon": 54,
+      "shouryoku": 41,
+      "teisatsu": 31,
+      "tousotsu": 54
+    },
     "toku_max_status": {
       "dageki": 69,
       "hissatsu": 32,
@@ -3722,6 +4511,7 @@
       "teisatsu": 33.0,
       "tousotsu": 69
     },
+    "uid": "130",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 0, "tousotsu": 2 }
   },
   "132": {
@@ -3748,10 +4538,21 @@
       "teisatsu": 15.0,
       "tousotsu": 72
     },
-    "name": "",
+    "name": "Taro Tachi",
     "range": "広",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 62,
+      "hissatsu": 26,
+      "impei": 31,
+      "kidou": 17,
+      "seizon": 67,
+      "shouryoku": 50,
+      "teisatsu": 18,
+      "tousotsu": 62
+    },
     "toku_max_status": {
       "dageki": 82,
       "hissatsu": 26,
@@ -3762,6 +4563,7 @@
       "teisatsu": 20.0,
       "tousotsu": 77
     },
+    "uid": "132",
     "up": { "dageki": 3, "kidou": 0, "shouryoku": 1, "tousotsu": 2 }
   },
   "133": {
@@ -3788,10 +4590,12 @@
       "teisatsu": 56.0,
       "tousotsu": 125
     },
-    "name": "",
+    "name": "Taro Tachi Kiwami",
     "range": "広",
     "rarelity": 4,
     "slot": 3,
+    "toku": 100,
+    "uid": "133",
     "up": { "dageki": 6, "kidou": 0, "shouryoku": 2, "tousotsu": 4 }
   },
   "134": {
@@ -3818,10 +4622,21 @@
       "teisatsu": 13.0,
       "tousotsu": 75
     },
-    "name": "",
+    "name": "Jiro Tachi",
     "range": "広",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 65,
+      "hissatsu": 23,
+      "impei": 35,
+      "kidou": 16,
+      "seizon": 62,
+      "shouryoku": 48,
+      "teisatsu": 17,
+      "tousotsu": 64
+    },
     "toku_max_status": {
       "dageki": 84,
       "hissatsu": 23,
@@ -3832,6 +4647,7 @@
       "teisatsu": 18.0,
       "tousotsu": 80
     },
+    "uid": "134",
     "up": { "dageki": 3, "kidou": 0, "shouryoku": 1, "tousotsu": 3 }
   },
   "135": {
@@ -3858,10 +4674,12 @@
       "teisatsu": 50.0,
       "tousotsu": 130
     },
-    "name": "",
+    "name": "Jiro Tachi Kiwami",
     "range": "広",
     "rarelity": 4,
     "slot": 3,
+    "toku": 100,
+    "uid": "135",
     "up": { "dageki": 6, "kidou": 0, "shouryoku": 2, "tousotsu": 6 }
   },
   "136": {
@@ -3888,10 +4706,21 @@
       "teisatsu": 20.0,
       "tousotsu": 45
     },
-    "name": "",
+    "name": "Nihongo",
     "range": "縦",
     "rarelity": 4,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 57,
+      "hissatsu": 34,
+      "impei": 33,
+      "kidou": 41,
+      "seizon": 61,
+      "shouryoku": 54,
+      "teisatsu": 16,
+      "tousotsu": 44
+    },
     "toku_max_status": {
       "dageki": 72,
       "hissatsu": 34,
@@ -3902,6 +4731,7 @@
       "teisatsu": 25.0,
       "tousotsu": 50
     },
+    "uid": "136",
     "up": { "dageki": 1, "kidou": 0, "shouryoku": 3, "tousotsu": 0 }
   },
   "137": {
@@ -3928,10 +4758,12 @@
       "teisatsu": 54.0,
       "tousotsu": 84
     },
-    "name": "",
+    "name": "Nihongo Kiwami",
     "range": "縦",
     "rarelity": 5,
     "slot": 3,
+    "toku": 100,
+    "uid": "137",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 6, "tousotsu": 0 }
   },
   "138": {
@@ -3958,10 +4790,21 @@
       "teisatsu": 35.0,
       "tousotsu": 46
     },
-    "name": "",
+    "name": "Otegine",
     "range": "縦",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 55,
+      "hissatsu": 32,
+      "impei": 33,
+      "kidou": 37,
+      "seizon": 54,
+      "shouryoku": 55,
+      "teisatsu": 36,
+      "tousotsu": 46
+    },
     "toku_max_status": {
       "dageki": 69,
       "hissatsu": 32,
@@ -3972,6 +4815,7 @@
       "teisatsu": 40.0,
       "tousotsu": 51
     },
+    "uid": "138",
     "up": { "dageki": 1, "kidou": 0, "shouryoku": 3, "tousotsu": 0 }
   },
   "139": {
@@ -3998,10 +4842,12 @@
       "teisatsu": 60.0,
       "tousotsu": 94
     },
-    "name": "",
+    "name": "Otegine Kiwami",
     "range": "縦",
     "rarelity": 4,
     "slot": 3,
+    "toku": 100,
+    "uid": "139",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 6, "tousotsu": 0 }
   },
   "140": {
@@ -4028,10 +4874,21 @@
       "teisatsu": 37.0,
       "tousotsu": 45
     },
-    "name": "",
+    "name": "Tomoegata Naginata",
     "range": "横",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 50,
+      "hissatsu": 26,
+      "impei": 40,
+      "kidou": 37,
+      "seizon": 56,
+      "shouryoku": 49,
+      "teisatsu": 36,
+      "tousotsu": 44
+    },
     "toku_max_status": {
       "dageki": 65,
       "hissatsu": 26,
@@ -4042,6 +4899,7 @@
       "teisatsu": 42.0,
       "tousotsu": 50
     },
+    "uid": "140",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 2, "tousotsu": 1 }
   },
   "142": {
@@ -4068,10 +4926,21 @@
       "teisatsu": 55.0,
       "tousotsu": 36
     },
-    "name": "",
+    "name": "Mori Toshiro",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 16,
+      "hissatsu": 32,
+      "impei": 41,
+      "kidou": 23,
+      "seizon": 36,
+      "shouryoku": 22,
+      "teisatsu": 49,
+      "tousotsu": 30
+    },
     "toku_max_status": {
       "dageki": 26,
       "hissatsu": 32,
@@ -4082,6 +4951,7 @@
       "teisatsu": 59.0,
       "tousotsu": 40
     },
+    "uid": "142",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 2, "tousotsu": 0 }
   },
   "144": {
@@ -4108,10 +4978,21 @@
       "teisatsu": 46.0,
       "tousotsu": 38
     },
-    "name": "",
+    "name": "Kotegirigo",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 30,
+      "hissatsu": 50,
+      "impei": 34,
+      "kidou": 42,
+      "seizon": 40,
+      "shouryoku": 42,
+      "teisatsu": 41,
+      "tousotsu": 32
+    },
     "toku_max_status": {
       "dageki": 41,
       "hissatsu": 50,
@@ -4122,6 +5003,7 @@
       "teisatsu": 52.0,
       "tousotsu": 44
     },
+    "uid": "144",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 0, "tousotsu": 1 }
   },
   "146": {
@@ -4148,10 +5030,21 @@
       "teisatsu": 44.0,
       "tousotsu": 42
     },
-    "name": "",
+    "name": "Kenshin Kagemitsu",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 22,
+      "hissatsu": 38,
+      "impei": 37,
+      "kidou": 29,
+      "seizon": 36,
+      "shouryoku": 21,
+      "teisatsu": 36,
+      "tousotsu": 32
+    },
     "toku_max_status": {
       "dageki": 33,
       "hissatsu": 38,
@@ -4162,6 +5055,7 @@
       "teisatsu": 48.0,
       "tousotsu": 42
     },
+    "uid": "146",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 1, "tousotsu": 0 }
   },
   "148": {
@@ -4188,10 +5082,21 @@
       "teisatsu": 27.0,
       "tousotsu": 67
     },
-    "name": "",
+    "name": "Azuki Nagamitsu",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 61,
+      "hissatsu": 37,
+      "impei": 30,
+      "kidou": 52,
+      "seizon": 59,
+      "shouryoku": 37,
+      "teisatsu": 30,
+      "tousotsu": 57
+    },
     "toku_max_status": {
       "dageki": 73,
       "hissatsu": 37,
@@ -4202,6 +5107,7 @@
       "teisatsu": 33.0,
       "tousotsu": 73
     },
+    "uid": "148",
     "up": { "dageki": 3, "kidou": 2, "shouryoku": 0, "tousotsu": 2 }
   },
   "150": {
@@ -4228,10 +5134,21 @@
       "teisatsu": 52.0,
       "tousotsu": 40
     },
-    "name": "",
+    "name": "Hyuga Masamune",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 18,
+      "hissatsu": 31,
+      "impei": 42,
+      "kidou": 33,
+      "seizon": 33,
+      "shouryoku": 20,
+      "teisatsu": 41,
+      "tousotsu": 31
+    },
     "toku_max_status": {
       "dageki": 26,
       "hissatsu": 31,
@@ -4242,6 +5159,7 @@
       "teisatsu": 56.0,
       "tousotsu": 44
     },
+    "uid": "150",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 2, "tousotsu": 0 }
   },
   "152": {
@@ -4268,10 +5186,21 @@
       "teisatsu": 35.0,
       "tousotsu": 45
     },
-    "name": "",
+    "name": "Shizukagata Naginata",
     "range": "横",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 52,
+      "hissatsu": 26,
+      "impei": 35,
+      "kidou": 36,
+      "seizon": 58,
+      "shouryoku": 54,
+      "teisatsu": 34,
+      "tousotsu": 44
+    },
     "toku_max_status": {
       "dageki": 67,
       "hissatsu": 26,
@@ -4282,6 +5211,7 @@
       "teisatsu": 40.0,
       "tousotsu": 50
     },
+    "uid": "152",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 1, "tousotsu": 1 }
   },
   "154": {
@@ -4308,10 +5238,21 @@
       "teisatsu": 38.0,
       "tousotsu": 40
     },
-    "name": "",
+    "name": "Nansen Ichimonji",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 40,
+      "hissatsu": 37,
+      "impei": 41,
+      "kidou": 46,
+      "seizon": 41,
+      "shouryoku": 34,
+      "teisatsu": 38,
+      "tousotsu": 37
+    },
     "toku_max_status": {
       "dageki": 57,
       "hissatsu": 37,
@@ -4322,6 +5263,7 @@
       "teisatsu": 43.0,
       "tousotsu": 45
     },
+    "uid": "154",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 0 }
   },
   "156": {
@@ -4348,10 +5290,21 @@
       "teisatsu": 29.0,
       "tousotsu": 63
     },
-    "name": "",
+    "name": "Chiyoganemaru",
     "range": "狭",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 52,
+      "hissatsu": 30,
+      "impei": 33,
+      "kidou": 31,
+      "seizon": 63,
+      "shouryoku": 39,
+      "teisatsu": 35,
+      "tousotsu": 56
+    },
     "toku_max_status": {
       "dageki": 65,
       "hissatsu": 30,
@@ -4362,6 +5315,7 @@
       "teisatsu": 35.0,
       "tousotsu": 69
     },
+    "uid": "156",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 0, "tousotsu": 2 }
   },
   "158": {
@@ -4388,10 +5342,21 @@
       "teisatsu": 39.0,
       "tousotsu": 42
     },
-    "name": "",
+    "name": "Yamambagiri Chogi",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 41,
+      "hissatsu": 35,
+      "impei": 41,
+      "kidou": 45,
+      "seizon": 41,
+      "shouryoku": 33,
+      "teisatsu": 39,
+      "tousotsu": 39
+    },
     "toku_max_status": {
       "dageki": 58,
       "hissatsu": 35,
@@ -4402,6 +5367,7 @@
       "teisatsu": 44.0,
       "tousotsu": 47
     },
+    "uid": "158",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "160": {
@@ -4428,10 +5394,21 @@
       "teisatsu": 39.0,
       "tousotsu": 45
     },
-    "name": "",
+    "name": "Buzengo",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 40,
+      "hissatsu": 36,
+      "impei": 35,
+      "kidou": 44,
+      "seizon": 50,
+      "shouryoku": 40,
+      "teisatsu": 39,
+      "tousotsu": 41
+    },
     "toku_max_status": {
       "dageki": 59,
       "hissatsu": 36,
@@ -4442,6 +5419,7 @@
       "teisatsu": 44.0,
       "tousotsu": 50
     },
+    "uid": "160",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "162": {
@@ -4468,10 +5446,21 @@
       "teisatsu": 8.0,
       "tousotsu": 57
     },
-    "name": "",
+    "name": "Nenekirimaru",
     "range": "広",
     "rarelity": 3,
     "slot": 2,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 68,
+      "hissatsu": 40,
+      "impei": 20,
+      "kidou": 27,
+      "seizon": 60,
+      "shouryoku": 47,
+      "teisatsu": 12,
+      "tousotsu": 49
+    },
     "toku_max_status": {
       "dageki": 90,
       "hissatsu": 40,
@@ -4482,6 +5471,7 @@
       "teisatsu": 13.0,
       "tousotsu": 62
     },
+    "uid": "162",
     "up": { "dageki": 3, "kidou": 1, "shouryoku": 1, "tousotsu": 2 }
   },
   "164": {
@@ -4508,10 +5498,21 @@
       "teisatsu": 57.0,
       "tousotsu": 70
     },
-    "name": "",
+    "name": "Hakusan Yoshimitsu",
     "range": "狭",
     "rarelity": 4,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 35,
+      "hissatsu": 30,
+      "impei": 39,
+      "kidou": 21,
+      "seizon": 70,
+      "shouryoku": 30,
+      "teisatsu": 54,
+      "tousotsu": 60
+    },
     "toku_max_status": {
       "dageki": 40,
       "hissatsu": 30,
@@ -4522,6 +5523,7 @@
       "teisatsu": 62.0,
       "tousotsu": 75
     },
+    "uid": "164",
     "up": { "dageki": 1, "kidou": 0, "shouryoku": 1, "tousotsu": 3 }
   },
   "166": {
@@ -4548,10 +5550,21 @@
       "teisatsu": 38.0,
       "tousotsu": 46
     },
-    "name": "",
+    "name": "Nankai Taro Choson",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 43,
+      "hissatsu": 32,
+      "impei": 40,
+      "kidou": 37,
+      "seizon": 50,
+      "shouryoku": 35,
+      "teisatsu": 38,
+      "tousotsu": 45
+    },
     "toku_max_status": {
       "dageki": 60,
       "hissatsu": 32,
@@ -4562,6 +5575,7 @@
       "teisatsu": 43.0,
       "tousotsu": 51
     },
+    "uid": "166",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 0 }
   },
   "168": {
@@ -4588,10 +5602,21 @@
       "teisatsu": 43.0,
       "tousotsu": 34
     },
-    "name": "",
+    "name": "Hizen Tadahiro",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 32,
+      "hissatsu": 48,
+      "impei": 41,
+      "kidou": 42,
+      "seizon": 37,
+      "shouryoku": 44,
+      "teisatsu": 43,
+      "tousotsu": 30
+    },
     "toku_max_status": {
       "dageki": 48,
       "hissatsu": 48,
@@ -4602,6 +5627,7 @@
       "teisatsu": 49.0,
       "tousotsu": 40
     },
+    "uid": "168",
     "up": { "dageki": 0, "kidou": 2, "shouryoku": 0, "tousotsu": 1 }
   },
   "170": {
@@ -4628,10 +5654,21 @@
       "teisatsu": 44.0,
       "tousotsu": 38
     },
-    "name": "",
+    "name": "Chatan Nakiri",
     "range": "狭",
     "rarelity": 1,
     "slot": 1,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 18,
+      "hissatsu": 35,
+      "impei": 40,
+      "kidou": 29,
+      "seizon": 39,
+      "shouryoku": 25,
+      "teisatsu": 38,
+      "tousotsu": 32
+    },
     "toku_max_status": {
       "dageki": 26,
       "hissatsu": 35,
@@ -4642,6 +5679,7 @@
       "teisatsu": 48.0,
       "tousotsu": 42
     },
+    "uid": "170",
     "up": { "dageki": 0, "kidou": 1, "shouryoku": 2, "tousotsu": 0 }
   },
   "172": {
@@ -4668,10 +5706,21 @@
       "teisatsu": 38.0,
       "tousotsu": 49
     },
-    "name": "",
+    "name": "Kuwanago",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 45,
+      "hissatsu": 34,
+      "impei": 39,
+      "kidou": 36,
+      "seizon": 44,
+      "shouryoku": 41,
+      "teisatsu": 38,
+      "tousotsu": 43
+    },
     "toku_max_status": {
       "dageki": 61,
       "hissatsu": 34,
@@ -4682,6 +5731,7 @@
       "teisatsu": 43.0,
       "tousotsu": 54
     },
+    "uid": "172",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "174": {
@@ -4708,10 +5758,21 @@
       "teisatsu": 39.0,
       "tousotsu": 44
     },
-    "name": "",
+    "name": "Suishinshi Masahide",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 42,
+      "hissatsu": 36,
+      "impei": 40,
+      "kidou": 39,
+      "seizon": 46,
+      "shouryoku": 34,
+      "teisatsu": 40,
+      "tousotsu": 41
+    },
     "toku_max_status": {
       "dageki": 56,
       "hissatsu": 36,
@@ -4722,6 +5783,7 @@
       "teisatsu": 44.0,
       "tousotsu": 49
     },
+    "uid": "174",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 0 }
   },
   "176": {
@@ -4748,10 +5810,21 @@
       "teisatsu": 38.0,
       "tousotsu": 42
     },
-    "name": "",
+    "name": "Minamotono Kiyomaro",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 46,
+      "hissatsu": 36,
+      "impei": 40,
+      "kidou": 41,
+      "seizon": 45,
+      "shouryoku": 33,
+      "teisatsu": 39,
+      "tousotsu": 39
+    },
     "toku_max_status": {
       "dageki": 62,
       "hissatsu": 36,
@@ -4762,6 +5835,7 @@
       "teisatsu": 43.0,
       "tousotsu": 47
     },
+    "uid": "176",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 0 }
   },
   "178": {
@@ -4788,10 +5862,21 @@
       "teisatsu": 39.0,
       "tousotsu": 48
     },
-    "name": "",
+    "name": "Matsuigo",
     "range": "狭",
     "rarelity": 2,
     "slot": 2,
+    "toku": 20,
+    "toku_initial_status": {
+      "dageki": 43,
+      "hissatsu": 36,
+      "impei": 41,
+      "kidou": 42,
+      "seizon": 44,
+      "shouryoku": 31,
+      "teisatsu": 40,
+      "tousotsu": 43
+    },
     "toku_max_status": {
       "dageki": 60,
       "hissatsu": 36,
@@ -4802,6 +5887,7 @@
       "teisatsu": 44.0,
       "tousotsu": 53
     },
+    "uid": "178",
     "up": { "dageki": 1, "kidou": 1, "shouryoku": 0, "tousotsu": 1 }
   },
   "180": {
@@ -4828,10 +5914,21 @@
       "teisatsu": null,
       "tousotsu": 74
     },
-    "name": "",
+    "name": "Sanchomo",
     "range": "狭",
     "rarelity": 5,
     "slot": 3,
+    "toku": 25,
+    "toku_initial_status": {
+      "dageki": 59,
+      "hissatsu": 37,
+      "impei": 27,
+      "kidou": 28,
+      "seizon": 57,
+      "shouryoku": 42,
+      "teisatsu": 36,
+      "tousotsu": 65
+    },
     "toku_max_status": {
       "dageki": 73,
       "hissatsu": 37,
@@ -4842,6 +5939,7 @@
       "teisatsu": 39.0,
       "tousotsu": 80
     },
+    "uid": "180",
     "up": { "dageki": 2, "kidou": 0, "shouryoku": 1, "tousotsu": 2 }
   }
 }

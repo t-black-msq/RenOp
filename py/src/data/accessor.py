@@ -3,7 +3,7 @@
 __all__ = []
 __author__ = 't-black-msq <t.black.msq@gmail.com>'
 
-from typing import List, Tuple
+from typing import Dict, List, Tuple
 
 from utils import KatanaInfo, is_integer, read_data
 
@@ -13,6 +13,9 @@ class DataAccessor(object):
 
     def __init__(self):
         self.__data = read_data()
+
+    def get_all(self) -> Dict[str, KatanaInfo]:
+        return self.__data
 
     def get_katana(self, no_or_name: str) -> KatanaInfo:
         if is_integer(no_or_name):
@@ -30,10 +33,10 @@ class DataAccessor(object):
             return self.__get_katana_by_no(candidates[0][0])
         else:
             # select
-            print('Multiple katanas were found')
+            print(' 複数の刀剣が見つかりました')
             for uid, katana_name in candidates:
-                print(f' {uid:>3d}: {katana_name}')
-            selected = input('Selected Katana No')
+                print(f'  {uid}: {katana_name}')
+            selected = input(' 選択してください: ')
             return self.__get_katana_by_no(selected)
 
     def __search_katana(self, name: str) -> List[Tuple[str, str]]:

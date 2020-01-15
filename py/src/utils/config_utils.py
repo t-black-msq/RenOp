@@ -9,16 +9,20 @@ from typing import Any, Dict, NewType, Union
 import pandas
 
 KatanaInfo = NewType(
-    'KatanaInfo', Dict[str, Dict[str, Union[str, Dict[str, int]]]])
+    'KatanaInfo', Dict[str, Union[str, Dict[str, int]]])
 FILENAME = './data/katana.json'
 POSSESSED = '../../possessed.csv'
 
 
-def read_data() -> KatanaInfo:
+def read_data() -> Dict[str, KatanaInfo]:
     with open(FILENAME, encoding='utf8') as data_file:
         return json.load(data_file)
 
 
 def read_possessed() -> pandas.core.frame.DataFrame:
-    df = pandas.read_csv(POSSESSED, encoding='cp932')
+    df = pandas.read_csv(
+        POSSESSED,
+        encoding='cp932',
+        dtype={'No.': str})
+    df.index = df['No.']
     return df
