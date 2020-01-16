@@ -1,0 +1,6 @@
+work/
+__pycache__/
+build/
+
+possessed_new*
+*.exe
