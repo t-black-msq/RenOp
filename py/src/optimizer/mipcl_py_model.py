@@ -14,6 +14,8 @@ from utils import KatanaInfo
 class RenketsuModel(mp.Problem):
     """"""
 
+    weight = {1: 1, 2: 1, 3: 1, 4: 3, 5: 5}
+
     def __init__(self, model_name: str, all_data: dict):
         super().__init__(model_name)
         self.__all_data = all_data
@@ -80,16 +82,20 @@ class RenketsuModel(mp.Problem):
             if num > 0:
                 name = self.__all_data[uid]['display_name'].replace(' ', '_')
                 # x_i \in \mathbb{N} \forall i \in K
-                self.__x[uid] = mp.Var(f'x_{name}', mp.INT, ub=num)
+                self.__x[uid] = mp.Var(name, mp.INT, ub=num)
+                # self.priority_dict[self.__all_data[uid]['rarelity']]
         if len(self.__x) == 0:
             print('ERROR: 錬結で使用する刀剣を possessed.csv に入力してください')
             os._exit(1)
         # o \in \mathbb{N}
         self.__over = mp.Var(f'over')
 
-    def set_objective(self):
+    def set_objective(self, weightA: int = 10, weightB: int = 1):
         # \sum_{i \in K} 10 x_i + o
-        mp.minimize(10 * mp.sum_(self.__x.values()) + self.__over)
+        mp.minimize(weightA *
+                    mp.sum_(self.weight[self.__all_data[uid]['rarelity']] *
+                            self.__x[uid] for uid in self.__x) +
+                    weightB * self.__over)
 
     def add_constraint(self):
         self.__set_over_constr()
@@ -104,10 +110,10 @@ class RenketsuModel(mp.Problem):
         self.__over == mp.sum_(mp.sum_(self.__all_data[uid]['up'][status] * self.__x[uid] for uid in self.__x) for status in self.target_status) - sum(
             self.__katana[self.status][status] for status in self.target_status) + self.__dageki + self.__tousotsu + self.__kidou + self.__shouryoku
 
-    def make_problem(self):
+    def make_problem(self, weightA: int = 10, weightB: int = 1):
         if self.__has_data:
             self.add_variable()
-            self.set_objective()
+            self.set_objective(weightA, weightB)
             self.add_constraint()
         else:
             raise Exception(
