@@ -10,7 +10,7 @@ from model import Touken
 from .mipcl_py_model import RenketsuModel
 
 from const import HIGEKIRI, HIZAMARU, Status, ToukenInfoKey
-from utils import is_integer, read_avant, read_possessed, write_avant, write_possessed
+from utils import is_integer, read_avant, read_possessed, reflect_to_possessed, write_avant, write_possessed
 
 
 class RenketsuOptimizer(object):
@@ -66,6 +66,7 @@ class RenketsuOptimizer(object):
             print(' ※ 数値は半角のみ')
             print(' ※ 中断する場合は q')
             print(' ※ 前回と同じ条件の場合は s')
+            print(' ※ data.json から possessed.csv を読み直す場合は data')
             print(' ※ 所持刀剣数を 999 で試す場合は max')
             print(' 　 (極を除外する場合は max2)')
             print('------------------------------------------------------------')
@@ -115,6 +116,8 @@ class RenketsuOptimizer(object):
                 print(' ※ 数値は半角のみ')
                 print(' ※ 中断する場合は q')
                 print(' ※ 前回と同じ条件の場合は s')
+            elif identifier == 'data':
+                reflect_to_possessed()
             else:
                 print('もう一度入力してください')
             identifier = input('刀帳No または 刀剣名: ')
