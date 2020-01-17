@@ -210,3 +210,7 @@ class Touken(ToukenStatus):
     @property
     def is_toku(self) -> bool:
         return self.__toku_level <= self.level
+
+    @property
+    def max_status(self) -> dict:
+        return self.__max_status

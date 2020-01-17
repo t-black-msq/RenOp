@@ -89,7 +89,6 @@ class RenketsuModel(mp.Problem):
                     ' ', '_')
                 # x_i \in \mathbb{N} \forall i \in K
                 self.__x[uid] = mp.Var(name, mp.INT, ub=num)
-                # self.priority_dict[self.__all_data[uid]['rarelity']]
         if len(self.__x) == 0:
             print('ERROR: 錬結で使用する刀剣を possessed.csv に入力してください')
             os._exit(1)
@@ -108,20 +107,42 @@ class RenketsuModel(mp.Problem):
         self.__set_over_constr()
         self.__set_status_constraint()
 
+    def add_constraint2(self):
+        self.__set_over_constr2()
+        self.__set_status_constraint2()
+
     def __set_status_constraint(self):
         for status in self.target_status:
             mp.sum_(self.__all_data[uid][ToukenInfoKey.UP.value][status] * self.__x[uid]
                     for uid in self.__x) >= self.__katana[self.status][status] - getattr(self, status)
 
+    def __set_status_constraint2(self):
+        for status in self.target_status:
+            mp.sum_(self.__all_data[uid][ToukenInfoKey.UP.value][status] * self.__x[uid]
+                    for uid in self.__x) <= self.__katana[self.status][status] - getattr(self, status)
+
     def __set_over_constr(self):
         self.__over == mp.sum_(mp.sum_(self.__all_data[uid][ToukenInfoKey.UP.value][status] * self.__x[uid] for uid in self.__x) for status in self.target_status) - sum(
             self.__katana[self.status][status] for status in self.target_status) + self.__attack + self.__defense + self.__mobile + self.__back
+
+    def __set_over_constr2(self):
+        self.__over == mp.sum_(mp.sum_(self.__all_data[uid][ToukenInfoKey.UP.value][status] * self.__x[uid] for uid in self.__x) for status in self.target_status) + sum(
+            self.__katana[self.status][status] for status in self.target_status) - self.__attack - self.__defense - self.__mobile - self.__back
 
     def make_problem(self, weightA: int = 10, weightB: int = 1):
         if self.__has_data:
             self.add_variable()
             self.set_objective(weightA, weightB)
             self.add_constraint()
+        else:
+            raise Exception(
+                'call add_renketsu_data method before calling this')
+
+    def make_problem2(self, weightA: int = 10, weightB: int = 1):
+        if self.__has_data:
+            self.add_variable()
+            self.set_objective(weightA, weightB)
+            self.add_constraint2()
         else:
             raise Exception(
                 'call add_renketsu_data method before calling this')

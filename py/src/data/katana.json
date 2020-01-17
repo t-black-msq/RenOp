@@ -3775,14 +3775,14 @@
     "display_name": "長曽祢虎徹 極",
     "faction": "虎徹…?",
     "initial_status": {
-      "attack": 82,
+      "attack": 76,
       "loyalties": 70,
       "hide": 82,
-      "mobile": 48,
+      "mobile": 38,
       "hp_max": 50,
       "back": 48,
       "scout": 58,
-      "defense": 76
+      "defense": 70
     },
     "kind": "打刀",
     "max_status": {

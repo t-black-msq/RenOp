@@ -6,9 +6,12 @@ __all__ = [
     'read_avant',
     'read_data',
     'read_possessed',
-    'write_avant']
+    'reset_mode_avant',
+    'write_avant',
+    'write_possessed']
 __author__ = 't-black-msq <t.black.msq@gmail.com>'
 
+import csv
 import json
 import os
 from typing import Any, Dict, NewType, Union
@@ -50,6 +53,15 @@ def read_possessed() -> pandas.core.frame.DataFrame:
     return df
 
 
+def write_possessed(
+        dataframe: pandas.core.frame.DataFrame, id_: str = None):
+    dataframe.to_csv(
+        f'./data/possessed_new_{id_}.csv' if id_ else POSSESSED,
+        index=False,
+        quoting=csv.QUOTE_NONNUMERIC,
+        encoding='cp932')
+
+
 def check_possessed():
     """possessed.csvの中身をチェックする．所有刀剣がない場合はアプリを中断する．
     """
@@ -66,3 +78,8 @@ def read_avant() -> str:
 def write_avant(data: str):
     with open(AVANT, 'w', encoding='utf8') as avant:
         avant.write(data)
+
+
+def reset_mode_avant():
+    avant = read_avant()
+    write_avant(avant[:-1] + '0')

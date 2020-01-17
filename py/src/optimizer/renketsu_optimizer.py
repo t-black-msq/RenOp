@@ -3,7 +3,6 @@
 __all__ = ['RenketsuOptimizer']
 __author__ = 't-black-msq <t.black.msq@gmail.com>'
 
-import csv
 import os
 
 from data import DataAccessor
@@ -11,7 +10,7 @@ from model import Touken
 from .mipcl_py_model import RenketsuModel
 
 from const import HIGEKIRI, HIZAMARU, Status, ToukenInfoKey
-from utils import is_integer, read_avant, read_possessed, write_avant
+from utils import is_integer, read_avant, read_possessed, write_avant, write_possessed
 
 
 class RenketsuOptimizer(object):
@@ -33,7 +32,9 @@ class RenketsuOptimizer(object):
         self.__inputted = False
         self.__toku = False
         self.__max = False
+        self.__infeasible = False
         self.__max_no_kiwami = False
+        self.__output = False
         self.__given_data = data is not None
         self.__mode = 0
 
@@ -44,6 +45,18 @@ class RenketsuOptimizer(object):
     @property
     def model(self):
         return self.__model
+
+    @property
+    def is_infeasible(self) -> bool:
+        return self.__infeasible
+
+    @property
+    def output(self) -> bool:
+        return self.__output
+
+    @property
+    def is_max(self) -> bool:
+        return self.__mode > 0
 
     def add_objective(self):
         if self.__given_data:
@@ -152,6 +165,9 @@ class RenketsuOptimizer(object):
     def make_problem(self, weightA: int = 10, weightB: int = 1):
         self.__model.make_problem(weightA, weightB)
 
+    def make_problem2(self, weightA: int = 10, weightB: int = 1):
+        self.__model.make_problem2(weightA, weightB)
+
     def optimize(self):
         self.__model.optimize()
 
@@ -177,6 +193,7 @@ class RenketsuOptimizer(object):
             print(f'  余剰: {int(self.__model.over.val)}')
         elif self.__model.is_infeasible:
             print('NOT FOUND: ステータスをMAXにできません')
+            self.__infeasible = True
 
     def write_possessed(self, id_: str):
         for uid in self.__possessed.index:
@@ -184,17 +201,14 @@ class RenketsuOptimizer(object):
                 self.__possessed.at[uid, '所持数'] = (
                     self.__possessed.at[uid, '所持数'] - self.__model.x[uid].val)
 
-        self.__possessed.to_csv(
-            f'./data/possessed_new_{id_}.csv',
-            index=False,
-            quoting=csv.QUOTE_NONNUMERIC,
-            encoding='cp932')
+        write_possessed(self.__possessed, id_)
+        self.__output = True
 
     def parse_avant(self, data: str):
         self.__katana = self.__accessor.get_katana(data[:3])
         t = Touken(self.__accessor.get_katana(data[:3]), int(data[3:5]))
         self.__level = int(data[3:5])
-        self.__dageki = int(data[3:5])
+        self.__dageki = int(data[5:8])
         t.set_status(Status.ATTACK, int(data[5:8]))
         self.__tousotsu = int(data[8:11])
         t.set_status(Status.DEFENSE, int(data[8:11]))
@@ -220,3 +234,31 @@ class RenketsuOptimizer(object):
                 if self.__mode == 2:
                     continue
             self.__possessed.at[idx, '所持数'] = 999
+
+    def use_all(self):
+        print('所持している刀剣をすべて使うと')
+        up_attack = 0
+        up_defense = 0
+        up_mobile = 0
+        up_back = 0
+        for idx in self.__possessed.query('所持数 > 0').index:
+            up_attack += self.__possessed.at[idx, '所持数'] * \
+                self.__all[idx]['up'][Status.KEY_ATTACK.value]
+            up_defense += self.__possessed.at[idx, '所持数'] * \
+                self.__all[idx]['up'][Status.KEY_DEFENSE.value]
+            up_mobile += self.__possessed.at[idx, '所持数'] * \
+                self.__all[idx]['up'][Status.KEY_MOBILE.value]
+            up_back += self.__possessed.at[idx, '所持数'] * \
+                self.__all[idx]['up'][Status.KEY_BACK.value]
+        max_attack = self.t.max_status[Status.KEY_ATTACK.value]
+        max_defense = self.t.max_status[Status.KEY_DEFENSE.value]
+        max_mobile = self.t.max_status[Status.KEY_MOBILE.value]
+        max_back = self.t.max_status[Status.KEY_BACK.value]
+        print(
+            f'■ {Status.ATTACK.value}: {self.__dageki:3d} --> {min(self.__dageki + up_attack, max_attack):3d} (MAX: {max_attack:3d})')
+        print(
+            f'■ {Status.DEFENSE.value}: {self.__tousotsu:3d} --> {min(self.__tousotsu + up_defense, max_defense):3d} (MAX: {max_defense:3d})')
+        print(
+            f'■ {Status.MOBILE.value}: {self.__kidou:3d} --> {min(self.__kidou + up_mobile, max_mobile):3d} (MAX: {max_mobile:3d})')
+        print(
+            f'■ {Status.BACK.value}: {self.__shouryoku:3d} --> {min(self.__shouryoku + up_back, max_back):3d} (MAX: {max_back:3d})')
