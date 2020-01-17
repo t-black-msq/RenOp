@@ -16,7 +16,7 @@ from typing import Any, Dict, NewType, Union
 import pandas
 
 KatanaInfo = NewType(
-    'KatanaInfo', Dict[str, Union[str, Dict[str, int]]])
+    'KatanaInfo', Dict[str, Union[str, Dict[str, int], int]])
 FILENAME = './data/katana.json'
 POSSESSED = './data/possessed.csv'
 AVANT = './data/avant.dat'

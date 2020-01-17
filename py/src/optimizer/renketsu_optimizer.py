@@ -10,6 +10,7 @@ from data import DataAccessor
 from model import Touken
 from .mipcl_py_model import RenketsuModel
 
+from const import HIGEKIRI, HIZAMARU, Status, ToukenInfoKey
 from utils import is_integer, read_avant, read_possessed, write_avant
 
 
@@ -17,11 +18,11 @@ class RenketsuOptimizer(object):
     """"""
 
     status_map = {
-        'dageki': '打撃',
-        'tousotsu': '統率',
-        'kidou': '機動',
-        'shouryoku': '衝力',
-        'level': 'レベル'}
+        Status.KEY_ATTACK: Status.ATTACK.value,
+        Status.KEY_DEFENSE: Status.DEFENSE.value,
+        Status.KEY_MOBILE: Status.MOBILE.value,
+        Status.KEY_BACK: Status.BACK.value,
+        Status.KEY_LEVEL: Status.LEVEL.value}
 
     def __init__(self, data: str = None):
         self.__accessor = DataAccessor()
@@ -60,12 +61,13 @@ class RenketsuOptimizer(object):
         if self.__inputted:
             self.parse_avant(read_avant())
         else:
-            self.__level = self.__make_user_input_integer('level')
+            self.__level = self.__make_user_input_integer(Status.KEY_LEVEL)
             self.check_level()
-            self.__dageki = self.__make_user_input_integer('dageki')
-            self.__tousotsu = self.__make_user_input_integer('tousotsu')
-            self.__kidou = self.__make_user_input_integer('kidou')
-            self.__shouryoku = self.__make_user_input_integer('shouryoku')
+            self.__dageki = self.__make_user_input_integer(Status.KEY_ATTACK)
+            self.__tousotsu = self.__make_user_input_integer(
+                Status.KEY_DEFENSE)
+            self.__kidou = self.__make_user_input_integer(Status.KEY_MOBILE)
+            self.__shouryoku = self.__make_user_input_integer(Status.KEY_BACK)
 
         if self.__mode > 0:
             self.__maximize_possessed()
@@ -105,11 +107,10 @@ class RenketsuOptimizer(object):
             identifier = input('刀帳No または 刀剣名: ')
         self.__katana = k
 
-    def __make_user_input_integer(self, status_name: str) -> int:
-        message = f'■ {self.status_map[status_name]}: '
+    def __make_user_input_integer(self, status: Status) -> int:
+        message = f'■ {self.status_map[status]}: '
         val = input(message)
-        while not is_integer(val) or not self.check_param(
-                status_name, int(val)):
+        while not is_integer(val) or not self.check_param(status, int(val)):
             if val == 'q':
                 os._exit(1)
             print('もう一度入力してください')
@@ -117,33 +118,33 @@ class RenketsuOptimizer(object):
         return int(val)
 
     def check_level(self):
-        if self.__katana['name'].startswith('Higekiri'):
-            for uid in ('107', '108', '109', '110'):
-                if self.__level < self.__all[uid]['toku']:
+        if self.__katana[ToukenInfoKey.NAME_EN.value].startswith('Higekiri'):
+            for uid in HIGEKIRI:
+                if self.__level < self.__all[uid][ToukenInfoKey.TOKU_LEVEL.value]:
                     self.__katana = self.__all[uid]
-        elif self.__katana['name'].startswith('Hizamaru'):
-            for uid in ('112', '113', '114'):
-                if self.__level < self.__all[uid]['toku']:
+        elif self.__katana[ToukenInfoKey.NAME_EN.value].startswith('Hizamaru'):
+            for uid in HIZAMARU:
+                if self.__level < self.__all[uid][ToukenInfoKey.TOKU_LEVEL.value]:
                     self.__katana = self.__all[uid]
-        elif self.__katana['toku'] <= self.__level:
+        elif self.__katana[ToukenInfoKey.TOKU_LEVEL.value] <= self.__level:
             self.__model.set_toku()
             self.__toku = True
 
-    def check_param(self, name: str, val: int) -> bool:
-        if name == 'level':
+    def check_param(self, status: Status, val: int) -> bool:
+        if status is Status.KEY_LEVEL:
             return True
-        elif self.__level < self.__katana['toku']:
-            if val < self.__katana['initial_status'][name]:
-                print(f'入力された {self.status_map[name]} が初期ステータスより低いです')
-            elif self.__katana['max_status'][name] < val:
-                print(f'入力された {self.status_map[name]} が最大ステータスより高いです')
+        elif self.__level < self.__katana[ToukenInfoKey.TOKU_LEVEL.value]:
+            if val < self.__katana['initial_status'][status.value]:
+                print(f'入力された {self.status_map[status]} が初期ステータスより低いです')
+            elif self.__katana['max_status'][status.value] < val:
+                print(f'入力された {self.status_map[status]} が最大ステータスより高いです')
             else:
                 return True
         else:
-            if val < self.__katana['toku_initial_status'][name]:
-                print(f'入力された {self.status_map[name]} が初期ステータスより低いです')
-            elif self.__katana['toku_max_status'][name] < val:
-                print(f'入力された {self.status_map[name]} が最大ステータスより高いです')
+            if val < self.__katana['toku_initial_status'][status.value]:
+                print(f'入力された {self.status_map[status]} が初期ステータスより低いです')
+            elif self.__katana['toku_max_status'][status.value] < val:
+                print(f'入力された {self.status_map[status]} が最大ステータスより高いです')
             else:
                 return True
         return False
@@ -190,27 +191,25 @@ class RenketsuOptimizer(object):
             encoding='cp932')
 
     def parse_avant(self, data: str):
-        Touken(no=data[:3])
         self.__katana = self.__accessor.get_katana(data[:3])
+        t = Touken(self.__accessor.get_katana(data[:3]), int(data[3:5]))
         self.__level = int(data[3:5])
-        self.__dageki = int(data[5:8])
+        self.__dageki = int(data[3:5])
+        t.set_status(Status.ATTACK, int(data[5:8]))
         self.__tousotsu = int(data[8:11])
+        t.set_status(Status.DEFENSE, int(data[8:11]))
         self.__kidou = int(data[11:14])
+        t.set_status(Status.MOBILE, int(data[11:14]))
         self.__shouryoku = int(data[14:17])
+        t.set_status(Status.BACK, int(data[14:17]))
         if self.__mode == 0:
             self.__mode = int(data[17])
         self.check_level()
+        self.t = t
 
         if not self.__given_data:
             print('~~~~~~~~~~~~~~~~~~~~~~~~~')
-            print(f'■ 刀帳No: {self.__katana["uid"]}')
-            print(
-                f'■ 刀剣名: {self.__katana["display_name"]}{" 特" if self.__toku else ""}')
-            print(f'■ {self.status_map["level"]}: {self.__level}')
-            print(f'■ {self.status_map["dageki"]}: {self.__dageki}')
-            print(f'■ {self.status_map["tousotsu"]}: {self.__tousotsu}')
-            print(f'■ {self.status_map["kidou"]}: {self.__kidou}')
-            print(f'■ {self.status_map["shouryoku"]}: {self.__shouryoku}')
+            print(t)
 
     def compile_avant(self):
         return f'{self.__katana["uid"]}{self.__level:02d}{self.__dageki:03d}{self.__tousotsu:03d}{self.__kidou:03d}{self.__shouryoku:03d}{self.__mode}'
