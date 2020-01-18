@@ -3,7 +3,7 @@
 __all__ = ['Touken']
 __author__ = 't-black-msq <t.black.msq@gmail.com>'
 
-from typing import Any
+from typing import Any, Dict, Tuple
 
 from const import HIGEKIRI, HIZAMARU, TOKU, Status, ToukenInfoKey
 from data import DataAccessor
@@ -11,6 +11,10 @@ from utils import KatanaInfo
 
 
 class ToukenStatus(object):
+
+    __LG_MESSAGE = '入力された {0} が初期ステータスより{1}です'
+    __LOWER = '低い'
+    __GREATER = '高い'
 
     def __init__(self):
         self.__level = None
@@ -45,42 +49,55 @@ class ToukenStatus(object):
         else:
             print('Set level before setting other status')
 
-    def set_status(self, status: Status, value: int):
+    def set_status(self, status: Status, value: int) -> bool:
+        valid = False
         if self.__level:
             if status is Status.HP_MAX:
-                self.__hp_max = value
+                if self.__check_level(value):
+                    self.__hp_max = value
+                    valid = True
             elif status is Status.ATTACK:
                 self.__attack = value
+                return
             elif status is Status.DEFENSE:
                 self.__defense = value
+                return
             elif status is Status.MOBILE:
                 self.__mobile = value
+                return
             elif status is Status.BACK:
                 self.__back = value
+                return
             elif status is Status.SCOUT:
                 self.__scout = value
+                return
             elif status is Status.LOYALTIES:
-                self.__loyalties = value
+                # if self.__check_loyalties(value):
+                #     self.__loyalties = value
+                #     valid = True
+                self.__loyalties = self.__status_i[Status.KEY_LOYALTIES.value]
+                valid = True
             elif status is Status.HIDE:
                 self.__hide = value
+                return
         else:
             print('Set level before setting other status')
+        return valid
 
     def set_level(self, level: int):
         self.__level = level
-        self.__check_level()
+        self.__check_level(level)
 
-    def __check_level(self):
-        self.__check_integer(self.__level, Status.KEY_LEVEL.value)
-        if self.__level < 1 or 99 < self.__level:
-            raise ValueError('invalid level value')
+    def set_limit_status(self, initial: Dict[str, int], max_: Dict[str, int]):
+        self.__status_i = initial
+        self.__status_m = max_
 
-    def __check_loyalties(self):
-        self.__check_integer(self.__loyalties, Status.KEY_LOYALTIES.value)
-
-    def __check_integer(self, value: Any, name: str):
-        if not isinstance(value, int):
-            raise TypeError(f'{name} value must be integer')
+    def __check_level(self, level: int):
+        if level < 1:
+            print(self.__LG_MESSAGE.format(Status.LEVEL.value, self.__LOWER))
+        elif 99 < level:
+            print(self.__LG_MESSAGE.format(Status.LEVEL.value, self.__GREATER))
+        return 1 <= level <= 99
 
     @property
     def level(self) -> int:
@@ -136,10 +153,11 @@ class Touken(ToukenStatus):
 
         self.set_level(level)
         self.__parse_info(info)
+        self.set_limit_status(self.__initial_status, self.__max_status)
 
     def __str__(self) -> str:
         return '\n'.join([f'■ 刀帳No: {self.__uid}',
-                          f'■ 刀剣名: {self.__name}',
+                          f'■ 刀剣名: {self.__name}{" 特" if self.is_toku else ""}',
                           f'■ {Status.LEVEL.value}: {self.level}',
                           f'■ {Status.ATTACK.value}: {self.attack}',
                           f'■ {Status.DEFENSE.value}: {self.defense}',
@@ -165,7 +183,7 @@ class Touken(ToukenStatus):
         self.__slot = info_dict[ToukenInfoKey.SLOT.value]
 
     def __check_toku(self) -> bool:
-        if HIGEKIRI + HIZAMARU:
+        if self.__uid in HIGEKIRI + HIZAMARU:
             return self.__check_genji_brothers()
         return self.__toku_level <= self.level
 
@@ -194,23 +212,39 @@ class Touken(ToukenStatus):
                     continue
         return False
 
-    def make_avant_message(self, mode: str) -> str:
+    def make_avant_message(self, mode: int) -> str:
         return ''.join([self.__uid,
                         f'{self.level:02d}',
                         f'{self.attack:03d}',
                         f'{self.defense:03d}',
                         f'{self.mobile:03d}',
                         f'{self.back:03d}',
-                        mode])
+                        str(mode)])
+
+    @property
+    def uid(self) -> str:
+        return self.__uid
 
     @property
     def name(self) -> str:
         return self.__name
 
     @property
-    def is_toku(self) -> bool:
-        return self.__toku_level <= self.level
+    def toku_level(self) -> int:
+        return self.__toku_level
 
     @property
-    def max_status(self) -> dict:
+    def rarelity(self) -> int:
+        return self.__rarelity
+
+    @property
+    def initial_status(self) -> Dict[str, int]:
+        return self.__initial_status
+
+    @property
+    def max_status(self) -> Dict[str, int]:
         return self.__max_status
+
+    @property
+    def is_toku(self) -> bool:
+        return self.__toku_level <= self.level

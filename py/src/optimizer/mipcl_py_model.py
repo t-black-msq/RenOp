@@ -9,6 +9,7 @@ import mipcl_py.mipshell.mipshell as mp
 import pandas
 
 from const import Status, ToukenInfoKey
+from model import Touken
 from utils import KatanaInfo
 
 
@@ -33,7 +34,7 @@ class RenketsuModel(mp.Problem):
 
     @property
     def status(self):
-        return 'toku_max_status' if self.__toku else 'max_status'
+        return 'toku_max_status' if self.__katana.is_toku else 'max_status'
 
     @property
     def attack(self):
@@ -61,19 +62,14 @@ class RenketsuModel(mp.Problem):
 
     def add_renketsu_data(
             self,
-            katana: KatanaInfo,
-            level: int,
-            attack: int,
-            defense: int,
-            mobile: int,
-            back: int,
+            touken: Touken,
             possessed: pandas.core.frame.DataFrame):
-        self.__katana = katana
-        self.__level = level
-        self.__attack = attack
-        self.__defense = defense
-        self.__mobile = mobile
-        self.__back = back
+        self.__katana = touken
+        self.__level = touken.level
+        self.__attack = touken.attack
+        self.__defense = touken.defense
+        self.__mobile = touken.mobile
+        self.__back = touken.back
         self.__possessed = possessed
         self.__has_data = True
 
@@ -114,20 +110,20 @@ class RenketsuModel(mp.Problem):
     def __set_status_constraint(self):
         for status in self.target_status:
             mp.sum_(self.__all_data[uid][ToukenInfoKey.UP.value][status] * self.__x[uid]
-                    for uid in self.__x) >= self.__katana[self.status][status] - getattr(self, status)
+                    for uid in self.__x) >= self.__katana.max_status[status] - getattr(self, status)
 
     def __set_status_constraint2(self):
         for status in self.target_status:
             mp.sum_(self.__all_data[uid][ToukenInfoKey.UP.value][status] * self.__x[uid]
-                    for uid in self.__x) <= self.__katana[self.status][status] - getattr(self, status)
+                    for uid in self.__x) <= self.__katana.max_status[status] - getattr(self, status)
 
     def __set_over_constr(self):
         self.__over == mp.sum_(mp.sum_(self.__all_data[uid][ToukenInfoKey.UP.value][status] * self.__x[uid] for uid in self.__x) for status in self.target_status) - sum(
-            self.__katana[self.status][status] for status in self.target_status) + self.__attack + self.__defense + self.__mobile + self.__back
+            self.__katana.max_status[status] for status in self.target_status) + self.__attack + self.__defense + self.__mobile + self.__back
 
     def __set_over_constr2(self):
         self.__over == mp.sum_(mp.sum_(self.__all_data[uid][ToukenInfoKey.UP.value][status] * self.__x[uid] for uid in self.__x) for status in self.target_status) + sum(
-            self.__katana[self.status][status] for status in self.target_status) - self.__attack - self.__defense - self.__mobile - self.__back
+            self.__katana.max_status[status] for status in self.target_status) - self.__attack - self.__defense - self.__mobile - self.__back
 
     def make_problem(self, weightA: int = 10, weightB: int = 1):
         if self.__has_data:

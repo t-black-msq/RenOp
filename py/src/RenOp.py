@@ -46,19 +46,22 @@ def select_mode(
         data: str = None,
         weightA: int = 10,
         weightB: int = 1):
-    optimizer = RenketsuOptimizer(data)
-    optimizer.add_objective()
+    optimizer = RenketsuOptimizer()
+    if data:
+        optimizer.set_initial_data()
+    else:
+        optimizer.input_renketsu_touken()
     optimizer.make_problem(weightA, weightB)
     optimizer.optimize()
     print('------------------------------------------------------------')
     print(f' {id_}: {name} を考慮した候補')
-    optimizer.print_(False)
+    optimizer.print_solution()
     if optimizer.is_infeasible:
-        optimizer2 = RenketsuOptimizer(read_avant())
-        optimizer2.add_objective()
+        optimizer2 = RenketsuOptimizer()
+        optimizer2.set_initial_data()
         optimizer2.make_problem2(weightA, weightB)
         optimizer2.optimize()
-        optimizer2.print_(False)
+        optimizer2.print_solution()
     else:
         optimizer.write_possessed(id_)
 

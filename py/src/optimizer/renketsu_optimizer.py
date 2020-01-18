@@ -9,161 +9,104 @@ from data import DataAccessor
 from model import Touken
 from .mipcl_py_model import RenketsuModel
 
-from const import HIGEKIRI, HIZAMARU, Status, ToukenInfoKey
+from const import HIGEKIRI, HIZAMARU, SEPARATOR, Status, ToukenInfoKey
 from utils import is_integer, read_avant, read_possessed, reflect_to_possessed, write_avant, write_possessed
 
 
-class RenketsuOptimizer(object):
-    """"""
+class RenketsuOptimizer:
 
-    status_map = {
-        Status.KEY_ATTACK: Status.ATTACK.value,
-        Status.KEY_DEFENSE: Status.DEFENSE.value,
-        Status.KEY_MOBILE: Status.MOBILE.value,
-        Status.KEY_BACK: Status.BACK.value,
-        Status.KEY_LEVEL: Status.LEVEL.value}
+    __MAIN_MESSAGE = (
+        '錬結する刀剣の情報を入力してください\n'
+        ' ※ 数値は半角のみ\n'
+        ' ※ 中断する場合は q')
+    __SAME_MESSAGE = ' ※ 前回と同じ条件の場合は s'
+    __DATA_MESSAGE = ' ※ data.json から possessed.csv を読み直す場合は data'
+    __MAX_MESSAGE = ' ※ 所持刀剣数を 999 で試す場合は max\n 　 (極を除外する場合は max2)'
+    __NO_OR_NAME = '■ 刀帳No または 刀剣名: '
+    __RETRY_MESSAGE = 'もう一度入力してください'
 
-    def __init__(self, data: str = None):
+    def __init__(self):
         self.__accessor = DataAccessor()
-        self.__katana = None
-        self.__all = self.__accessor.get_all()
-        self.__model = RenketsuModel('renketsu', self.__all)
+        self.__model = RenketsuModel('renketsu', self.__accessor.get_all())
         self.__possessed = read_possessed()
-        self.__inputted = False
-        self.__toku = False
-        self.__max = False
-        self.__infeasible = False
-        self.__max_no_kiwami = False
-        self.__output = False
-        self.__given_data = data is not None
+        self.__data = None
         self.__mode = 0
+        self.__infeasible = False
+        self.__output = False
 
-    @property
-    def katana(self):
-        return self.__katana
+    def set_initial_data(self):
+        self.__set_touken_from_avant()
+        self.__model.add_renketsu_data(self.__touken, self.__possessed)
 
-    @property
-    def model(self):
-        return self.__model
+    def input_renketsu_touken(self):
+        if self.__data:
+            return
 
-    @property
-    def is_infeasible(self) -> bool:
-        return self.__infeasible
+        print('\n'.join([self.__MAIN_MESSAGE, self.__SAME_MESSAGE,
+                         self.__DATA_MESSAGE, self.__MAX_MESSAGE, SEPARATOR]))
+        self.__input_touken()
+        self.__input_status()
+        write_avant(self.__touken.make_avant_message(self.__mode))
 
-    @property
-    def output(self) -> bool:
-        return self.__output
+        self.__model.add_renketsu_data(self.__touken, self.__possessed)
 
-    @property
-    def is_max(self) -> bool:
-        return self.__mode > 0
-
-    def add_objective(self):
-        if self.__given_data:
-            self.__inputted = True
-        else:
-            print('錬結する刀剣の情報を入力してください')
-            print(' ※ 数値は半角のみ')
-            print(' ※ 中断する場合は q')
-            print(' ※ 前回と同じ条件の場合は s')
-            print(' ※ data.json から possessed.csv を読み直す場合は data')
-            print(' ※ 所持刀剣数を 999 で試す場合は max')
-            print(' 　 (極を除外する場合は max2)')
-            print('------------------------------------------------------------')
-            self.__make_user_input_katana()
-
-        if self.__inputted:
-            self.parse_avant(read_avant())
-        else:
-            self.__level = self.__make_user_input_integer(Status.KEY_LEVEL)
-            self.check_level()
-            self.__dageki = self.__make_user_input_integer(Status.KEY_ATTACK)
-            self.__tousotsu = self.__make_user_input_integer(
-                Status.KEY_DEFENSE)
-            self.__kidou = self.__make_user_input_integer(Status.KEY_MOBILE)
-            self.__shouryoku = self.__make_user_input_integer(Status.KEY_BACK)
-
-        if self.__mode > 0:
-            self.__maximize_possessed()
-
-        write_avant(self.compile_avant())
-
-        self.__model.add_renketsu_data(
-            self.__katana,
-            self.__level,
-            self.__dageki,
-            self.__tousotsu,
-            self.__kidou,
-            self.__shouryoku,
-            self.__possessed)
-
-    def __make_user_input_katana(self):
-        identifier = input('■ 刀帳No または 刀剣名: ')
-        k = self.__accessor.get_katana(identifier)
-        while k is None:
+    def __input_touken(self):
+        identifier = input(self.__NO_OR_NAME)
+        self.__touken = self.__accessor.get_katana(identifier)
+        while self.__touken is None:
             if identifier == 'q':
                 os._exit(1)
             elif identifier == 's':
-                self.__inputted = True
+                self.__set_touken_from_avant()
+                print(self.__touken)
                 return
             elif identifier in ('max', 'max2'):
-                if identifier == 'max':
-                    self.__mode = 1
-                else:
-                    self.__mode = 2
-                print('-- max mode --')
-                print('錬結する刀剣の情報を入力してください')
-                print(' ※ 数値は半角のみ')
-                print(' ※ 中断する場合は q')
-                print(' ※ 前回と同じ条件の場合は s')
-            elif identifier == 'data':
-                reflect_to_possessed()
+                self.__mode = 1 if identifier == 'max' else 2
+                self.__maximize_possessed()
+                print('--- max mode ---')
+                print('\n'.join([self.__MAIN_MESSAGE, self.__SAME_MESSAGE]))
             else:
-                print('もう一度入力してください')
-            identifier = input('刀帳No または 刀剣名: ')
-        self.__katana = k
+                if identifier == 'data':
+                    reflect_to_possessed()
+                print(self.__RETRY_MESSAGE)
+            identifier = input(self.__NO_OR_NAME)
+            self.__touken = self.__accessor.get_katana(identifier)
 
-    def __make_user_input_integer(self, status: Status) -> int:
-        message = f'■ {self.status_map[status]}: '
+    def __input_status(self):
+        if self.__data:
+            return
+
+    def __input_integer(self, status: Status, key: str):
+        message = f'■ {key}: '
         val = input(message)
-        while not is_integer(val) or not self.check_param(status, int(val)):
-            if val == 'q':
-                os._exit(1)
-            print('もう一度入力してください')
-            val = input(message)
-        return int(val)
+        while True:
+            try:
+                if val == 'q':
+                    os._exit(1)
+                if self.__touken.set_status(status, int(val)):
+                    break
+            except BaseException:
+                print(self.__RETRY_MESSAGE)
+                val = input(message)
 
-    def check_level(self):
-        if self.__katana[ToukenInfoKey.NAME_EN.value].startswith('Higekiri'):
-            for uid in HIGEKIRI:
-                if self.__level < self.__all[uid][ToukenInfoKey.TOKU_LEVEL.value]:
-                    self.__katana = self.__all[uid]
-        elif self.__katana[ToukenInfoKey.NAME_EN.value].startswith('Hizamaru'):
-            for uid in HIZAMARU:
-                if self.__level < self.__all[uid][ToukenInfoKey.TOKU_LEVEL.value]:
-                    self.__katana = self.__all[uid]
-        elif self.__katana[ToukenInfoKey.TOKU_LEVEL.value] <= self.__level:
-            self.__model.set_toku()
-            self.__toku = True
+    def __set_touken_from_avant(self):
+        data = read_avant()
+        self.__data = data
+        self.__mode = int(data[17])
 
-    def check_param(self, status: Status, val: int) -> bool:
-        if status is Status.KEY_LEVEL:
-            return True
-        elif self.__level < self.__katana[ToukenInfoKey.TOKU_LEVEL.value]:
-            if val < self.__katana['initial_status'][status.value]:
-                print(f'入力された {self.status_map[status]} が初期ステータスより低いです')
-            elif self.__katana['max_status'][status.value] < val:
-                print(f'入力された {self.status_map[status]} が最大ステータスより高いです')
-            else:
-                return True
-        else:
-            if val < self.__katana['toku_initial_status'][status.value]:
-                print(f'入力された {self.status_map[status]} が初期ステータスより低いです')
-            elif self.__katana['toku_max_status'][status.value] < val:
-                print(f'入力された {self.status_map[status]} が最大ステータスより高いです')
-            else:
-                return True
-        return False
+        self.__touken = Touken(
+            self.__accessor.get_katana(data[:3]), int(data[3:5]))
+        self.__touken.set_status(Status.ATTACK, int(data[5:8]))
+        self.__touken.set_status(Status.DEFENSE, int(data[8:11]))
+        self.__touken.set_status(Status.MOBILE, int(data[11:14]))
+        self.__touken.set_status(Status.BACK, int(data[14:17]))
+
+    def __maximize_possessed(self):
+        for idx in self.__possessed.index:
+            if self.__possessed.at[idx, '刀名'].endswith(' 極'):
+                if self.__mode == 2:
+                    continue
+            self.__possessed.at[idx, '所持数'] = 999
 
     def make_problem(self, weightA: int = 10, weightB: int = 1):
         self.__model.make_problem(weightA, weightB)
@@ -174,26 +117,15 @@ class RenketsuOptimizer(object):
     def optimize(self):
         self.__model.optimize()
 
-    def print_model(self):
-        print('--- variables ---')
-        for v in self.__model.vars:
-            print(v)
-        print('--- objective ---')
-        print(self.__model.obj)
-        print('--- constraints ---')
-        for c in self.__model.ctrs:
-            print(c)
-
-    def print_(self, print_model: bool = True):
-        if print_model:
-            print_model()
+    def print_solution(self):
         if self.__model.is_solution:
-            print(f' cost: {self.__model.getObjVal()}')
-            for uid in self.__model.x:
-                if self.__model.x[uid].val > 1e-5:
-                    print(
-                        f'  {uid} {self.__model.x[uid].name}: {int(self.__model.x[uid].val):>2d}')
-            print(f'  余剰: {int(self.__model.over.val)}')
+            if self.__model.getObjVal() > 1e-5:
+                print(f' cost: {self.__model.getObjVal()}')
+                for uid in self.__model.x:
+                    var = self.__model.x[uid]
+                    if var.val > 1e-5:
+                        print(f'  {uid} {var.name}: {int(var.val):>2d}')
+                print(f'  余剰: {int(self.__model.over.val)}')
         elif self.__model.is_infeasible:
             print('NOT FOUND: ステータスをMAXにできません')
             self.__infeasible = True
@@ -206,37 +138,6 @@ class RenketsuOptimizer(object):
 
         write_possessed(self.__possessed, id_)
         self.__output = True
-
-    def parse_avant(self, data: str):
-        self.__katana = self.__accessor.get_katana(data[:3])
-        t = Touken(self.__accessor.get_katana(data[:3]), int(data[3:5]))
-        self.__level = int(data[3:5])
-        self.__dageki = int(data[5:8])
-        t.set_status(Status.ATTACK, int(data[5:8]))
-        self.__tousotsu = int(data[8:11])
-        t.set_status(Status.DEFENSE, int(data[8:11]))
-        self.__kidou = int(data[11:14])
-        t.set_status(Status.MOBILE, int(data[11:14]))
-        self.__shouryoku = int(data[14:17])
-        t.set_status(Status.BACK, int(data[14:17]))
-        if self.__mode == 0:
-            self.__mode = int(data[17])
-        self.check_level()
-        self.t = t
-
-        if not self.__given_data:
-            print('~~~~~~~~~~~~~~~~~~~~~~~~~')
-            print(t)
-
-    def compile_avant(self):
-        return f'{self.__katana["uid"]}{self.__level:02d}{self.__dageki:03d}{self.__tousotsu:03d}{self.__kidou:03d}{self.__shouryoku:03d}{self.__mode}'
-
-    def __maximize_possessed(self):
-        for idx in self.__possessed.index:
-            if self.__possessed.at[idx, '刀名'].endswith(' 極'):
-                if self.__mode == 2:
-                    continue
-            self.__possessed.at[idx, '所持数'] = 999
 
     def use_all(self):
         print('所持している刀剣をすべて使うと')
@@ -265,3 +166,15 @@ class RenketsuOptimizer(object):
             f'■ {Status.MOBILE.value}: {self.__kidou:3d} --> {min(self.__kidou + up_mobile, max_mobile):3d} (MAX: {max_mobile:3d})')
         print(
             f'■ {Status.BACK.value}: {self.__shouryoku:3d} --> {min(self.__shouryoku + up_back, max_back):3d} (MAX: {max_back:3d})')
+
+    @property
+    def is_infeasible(self) -> bool:
+        return self.__infeasible
+
+    @property
+    def output(self) -> bool:
+        return self.__output
+
+    @property
+    def is_max(self) -> bool:
+        return self.__mode > 0
