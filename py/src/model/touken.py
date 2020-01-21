@@ -57,47 +57,65 @@ class ToukenStatus(object):
                     self.__hp_max = value
                     valid = True
             elif status is Status.ATTACK:
-                self.__attack = value
-                return
+                if self.__check_status(
+                        Status.ATTACK, Status.KEY_ATTACK, value):
+                    self.__attack = value
+                    valid = True
             elif status is Status.DEFENSE:
-                self.__defense = value
-                return
+                if self.__check_status(
+                        Status.DEFENSE, Status.KEY_DEFENSE, value):
+                    self.__defense = value
+                    valid = True
             elif status is Status.MOBILE:
-                self.__mobile = value
-                return
+                if self.__check_status(
+                        Status.MOBILE, Status.KEY_MOBILE, value):
+                    self.__mobile = value
+                    valid = True
             elif status is Status.BACK:
-                self.__back = value
-                return
+                if self.__check_status(
+                        Status.BACK, Status.KEY_BACK, value):
+                    self.__back = value
+                    valid = True
             elif status is Status.SCOUT:
-                self.__scout = value
-                return
+                if self.__check_status(
+                        Status.SCOUT, Status.KEY_SCOUT, value):
+                    self.__scout = value
+                    valid = True
             elif status is Status.LOYALTIES:
-                # if self.__check_loyalties(value):
-                #     self.__loyalties = value
-                #     valid = True
                 self.__loyalties = self.__status_i[Status.KEY_LOYALTIES.value]
                 valid = True
             elif status is Status.HIDE:
-                self.__hide = value
-                return
+                if self.__check_status(
+                        Status.HIDE, Status.KEY_HIDE, value):
+                    self.__hide = value
+                    valid = True
         else:
             print('Set level before setting other status')
         return valid
 
     def set_level(self, level: int):
-        self.__level = level
-        self.__check_level(level)
+        if self.__check_level(level):
+            self.__level = level
+            return True
+        return False
 
     def set_limit_status(self, initial: Dict[str, int], max_: Dict[str, int]):
         self.__status_i = initial
         self.__status_m = max_
 
-    def __check_level(self, level: int):
+    def __check_level(self, level: int) -> bool:
         if level < 1:
             print(self.__LG_MESSAGE.format(Status.LEVEL.value, self.__LOWER))
         elif 99 < level:
             print(self.__LG_MESSAGE.format(Status.LEVEL.value, self.__GREATER))
         return 1 <= level <= 99
+
+    def __check_status(self, status: Status, key: Status, val: int) -> bool:
+        if val < self.__status_i[key.value]:
+            print(self.__LG_MESSAGE.format(Status.value, self.__LOWER))
+        elif self.__status_m[key.value] < val:
+            print(self.__LG_MESSAGE.format(Status.value, self.__GREATER))
+        return self.__status_i[key.value] <= val <= self.__status_m[key.value]
 
     @property
     def level(self) -> int:
@@ -148,12 +166,13 @@ class Touken(ToukenStatus):
 
     accessor = DataAccessor()
 
-    def __init__(self, info: KatanaInfo, level: int):
+    def __init__(self, info: KatanaInfo, level: int = None):
         super().__init__()
 
-        self.set_level(level)
-        self.__parse_info(info)
-        self.set_limit_status(self.__initial_status, self.__max_status)
+        self.__info = info
+        if level:
+            self.set_level(level)
+            self.parse_info()
 
     def __str__(self) -> str:
         return '\n'.join([f'■ 刀帳No: {self.__uid}',
@@ -164,23 +183,25 @@ class Touken(ToukenStatus):
                           f'■ {Status.MOBILE.value}: {self.mobile}',
                           f'■ {Status.BACK.value}: {self.back}'])
 
-    def __parse_info(self, info_dict: KatanaInfo):
-        self.__uid = info_dict[ToukenInfoKey.UID.value]
-        self.__name = info_dict[ToukenInfoKey.NAME.value]
-        self.__toku_level = info_dict[ToukenInfoKey.TOKU_LEVEL.value]
+    def parse_info(self):
+        self.__uid = self.__info[ToukenInfoKey.UID.value]
+        self.__name = self.__info[ToukenInfoKey.NAME.value]
+        self.__toku_level = self.__info[ToukenInfoKey.TOKU_LEVEL.value]
 
         if self.__check_toku():
-            self.__initial_status = info_dict[ToukenInfoKey.INITIAL_STATUS_TOKU.value]
-            self.__max_status = info_dict[ToukenInfoKey.MAX_STATUS_TOKU.value]
+            self.__initial_status = self.__info[ToukenInfoKey.INITIAL_STATUS_TOKU.value]
+            self.__max_status = self.__info[ToukenInfoKey.MAX_STATUS_TOKU.value]
         else:
-            self.__initial_status = info_dict[ToukenInfoKey.INITIAL_STATUS.value]
-            self.__max_status = info_dict[ToukenInfoKey.MAX_STATUS.value]
+            self.__initial_status = self.__info[ToukenInfoKey.INITIAL_STATUS.value]
+            self.__max_status = self.__info[ToukenInfoKey.MAX_STATUS.value]
 
-        self.__faction = info_dict[ToukenInfoKey.FACTION.value]
-        self.__kind = info_dict[ToukenInfoKey.KIND.value]
-        self.__range = info_dict[ToukenInfoKey.RANGE.value]
-        self.__rarelity = info_dict[ToukenInfoKey.RARELITY.value]
-        self.__slot = info_dict[ToukenInfoKey.SLOT.value]
+        self.__faction = self.__info[ToukenInfoKey.FACTION.value]
+        self.__kind = self.__info[ToukenInfoKey.KIND.value]
+        self.__range = self.__info[ToukenInfoKey.RANGE.value]
+        self.__rarelity = self.__info[ToukenInfoKey.RARELITY.value]
+        self.__slot = self.__info[ToukenInfoKey.SLOT.value]
+
+        self.set_limit_status(self.__initial_status, self.__max_status)
 
     def __check_toku(self) -> bool:
         if self.__uid in HIGEKIRI + HIZAMARU:

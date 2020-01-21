@@ -27,7 +27,8 @@ class RenketsuOptimizer:
 
     def __init__(self):
         self.__accessor = DataAccessor()
-        self.__model = RenketsuModel('renketsu', self.__accessor.get_all())
+        self.__all = self.__accessor.get_all()
+        self.__model = RenketsuModel('renketsu', self.__all)
         self.__possessed = read_possessed()
         self.__data = None
         self.__mode = 0
@@ -52,13 +53,12 @@ class RenketsuOptimizer:
 
     def __input_touken(self):
         identifier = input(self.__NO_OR_NAME)
-        self.__touken = self.__accessor.get_katana(identifier)
-        while self.__touken is None:
+        self.__touken_info = self.__accessor.get_katana(identifier)
+        while self.__touken_info is None:
             if identifier == 'q':
                 os._exit(1)
             elif identifier == 's':
                 self.__set_touken_from_avant()
-                print(self.__touken)
                 return
             elif identifier in ('max', 'max2'):
                 self.__mode = 1 if identifier == 'max' else 2
@@ -70,14 +70,35 @@ class RenketsuOptimizer:
                     reflect_to_possessed()
                 print(self.__RETRY_MESSAGE)
             identifier = input(self.__NO_OR_NAME)
-            self.__touken = self.__accessor.get_katana(identifier)
+            self.__touken_info = self.__accessor.get_katana(identifier)
+        self.__touken = Touken(self.__accessor.get_katana(identifier))
+        self.__input_level()
+        self.__touken.parse_info()
+
+    def __input_level(self):
+        message = f'■ {Status.LEVEL.value}: '
+        val = input(message)
+        while True:
+            try:
+                if val == 'q':
+                    os._exit(1)
+                if self.__touken.set_level(int(val)):
+                    break
+            except BaseException:
+                print(self.__RETRY_MESSAGE)
+                val = input(message)
 
     def __input_status(self):
         if self.__data:
             return
 
-    def __input_integer(self, status: Status, key: str):
-        message = f'■ {key}: '
+        self.__input_integer(Status.ATTACK)
+        self.__input_integer(Status.DEFENSE)
+        self.__input_integer(Status.MOBILE)
+        self.__input_integer(Status.BACK)
+
+    def __input_integer(self, status: Status):
+        message = f'■ {status.value}: '
         val = input(message)
         while True:
             try:
@@ -154,18 +175,18 @@ class RenketsuOptimizer:
                 self.__all[idx]['up'][Status.KEY_MOBILE.value]
             up_back += self.__possessed.at[idx, '所持数'] * \
                 self.__all[idx]['up'][Status.KEY_BACK.value]
-        max_attack = self.t.max_status[Status.KEY_ATTACK.value]
-        max_defense = self.t.max_status[Status.KEY_DEFENSE.value]
-        max_mobile = self.t.max_status[Status.KEY_MOBILE.value]
-        max_back = self.t.max_status[Status.KEY_BACK.value]
+        max_attack = self.__touken.max_status[Status.KEY_ATTACK.value]
+        max_defense = self.__touken.max_status[Status.KEY_DEFENSE.value]
+        max_mobile = self.__touken.max_status[Status.KEY_MOBILE.value]
+        max_back = self.__touken.max_status[Status.KEY_BACK.value]
         print(
-            f'■ {Status.ATTACK.value}: {self.__dageki:3d} --> {min(self.__dageki + up_attack, max_attack):3d} (MAX: {max_attack:3d})')
+            f'■ {Status.ATTACK.value}: {self.__touken.attack:3d} --> {min(self.__touken.attack + up_attack, max_attack):3d} (MAX: {max_attack:3d})')
         print(
-            f'■ {Status.DEFENSE.value}: {self.__tousotsu:3d} --> {min(self.__tousotsu + up_defense, max_defense):3d} (MAX: {max_defense:3d})')
+            f'■ {Status.DEFENSE.value}: {self.__touken.defense:3d} --> {min(self.__touken.defense + up_defense, max_defense):3d} (MAX: {max_defense:3d})')
         print(
-            f'■ {Status.MOBILE.value}: {self.__kidou:3d} --> {min(self.__kidou + up_mobile, max_mobile):3d} (MAX: {max_mobile:3d})')
+            f'■ {Status.MOBILE.value}: {self.__touken.mobile:3d} --> {min(self.__touken.mobile + up_mobile, max_mobile):3d} (MAX: {max_mobile:3d})')
         print(
-            f'■ {Status.BACK.value}: {self.__shouryoku:3d} --> {min(self.__shouryoku + up_back, max_back):3d} (MAX: {max_back:3d})')
+            f'■ {Status.BACK.value}: {self.__touken.back:3d} --> {min(self.__touken.back + up_back, max_back):3d} (MAX: {max_back:3d})')
 
     @property
     def is_infeasible(self) -> bool:
